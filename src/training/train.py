@@ -37,7 +37,8 @@ def get_callbacks(checkpoint_path: str, config: dict = CONFIG) -> list[tf.keras.
     train_cfg = config["training"]
     return [
         tf.keras.callbacks.EarlyStopping(
-            monitor="val_loss",
+            monitor=train_cfg.get("early_stopping_monitor", "val_loss"),
+            mode="auto",
             patience=train_cfg["early_stopping_patience"],
             restore_best_weights=True,
             verbose=1,

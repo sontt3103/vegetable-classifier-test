@@ -9,7 +9,7 @@ Cách dùng:
     img_size = CONFIG["data"]["img_size"]
 
 [UPDATED]: Project đã được move sang D:\vegetable-classifier (08/18/2026)
-Dataset ở: D:\vegetable-classifier\data\raw\{train, validation, test}
+Dataset ở: D:/vegetable-classifier/data/raw/{train, validation, test}
 """
 
 import os
@@ -105,7 +105,10 @@ CONFIG = {
     "training": {
         "loss": "categorical_crossentropy",
         "metrics": ["accuracy"],
-        "early_stopping_patience": 5,
+        # Theo dõi val_accuracy (không phải val_loss): CNN có BatchNorm thường dao động
+        # mạnh ở các epoch đầu, theo dõi val_loss với patience thấp sẽ dừng quá sớm.
+        "early_stopping_monitor": "val_accuracy",
+        "early_stopping_patience": 8,
         "reduce_lr_patience": 3,
         "reduce_lr_factor": 0.5,
         "min_lr": 1e-7,

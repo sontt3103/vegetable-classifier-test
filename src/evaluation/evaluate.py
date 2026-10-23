@@ -129,6 +129,7 @@ def compare_models(config: dict = CONFIG) -> pd.DataFrame:
 
     results = []
     for name, ckpt_file in [
+        ("baseline_cnn", "baseline_cnn.keras"),
         ("mobilenetv2_transfer", "mobilenetv2_transfer.keras"),
     ]:
         ckpt_path = checkpoints_dir / ckpt_file

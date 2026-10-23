@@ -173,15 +173,37 @@ def normalize_svm_summary(raw: dict) -> dict:
                 return raw[k]
         return None
 
+    # Nếu có classification_report (classical_svm_evaluation.json của TN 3) thì suy ra
+    # số ảnh test, số ảnh sai, class tốt nhất/yếu nhất
+    report = raw.get("classification_report") or {}
+    per_class = {
+        k: v for k, v in report.items()
+        if isinstance(v, dict) and k not in ("macro avg", "weighted avg")
+    }
+    n_test = None
+    if isinstance(report.get("macro avg"), dict):
+        n_test = int(report["macro avg"].get("support") or 0) or None
+    best = worst = None
+    if per_class:
+        best = max(per_class, key=lambda k: per_class[k].get("f1-score", 0))
+        worst = min(per_class, key=lambda k: per_class[k].get("f1-score", 0))
+    acc = pick("test_accuracy", "accuracy")
+    n_wrong = None
+    if n_test and isinstance(acc, (int, float)):
+        n_wrong = int(round(n_test * (1 - acc)))
+
+    def first(*vals):
+        return next((v for v in vals if v is not None), None)
+
     summary = {
-        "test_accuracy": pick("test_accuracy", "accuracy"),
+        "test_accuracy": acc,
         "test_precision_macro": pick("test_precision_macro", "precision_macro", "precision"),
         "test_recall_macro": pick("test_recall_macro", "recall_macro", "recall"),
         "test_f1_macro": pick("test_f1_macro", "f1_macro", "f1_score", "f1"),
-        "num_test_samples": pick("num_test_samples", "n_test"),
-        "num_misclassified": pick("num_misclassified"),
-        "best_class": pick("best_class"),
-        "worst_class": pick("worst_class"),
+        "num_test_samples": first(pick("num_test_samples", "n_test"), n_test),
+        "num_misclassified": first(pick("num_misclassified"), n_wrong),
+        "best_class": first(pick("best_class"), best),
+        "worst_class": first(pick("worst_class"), worst),
         "top_confused_pairs": pick("top_confused_pairs"),
         "overfitting_analysis": pick("overfitting_analysis"),
         # Thông tin riêng của SVM trong svm_evaluation.json (classical_svm.py)
@@ -193,7 +215,8 @@ def normalize_svm_summary(raw: dict) -> dict:
     }
     if summary["test_accuracy"] is None:
         return {}
-    return summary
+    # Bỏ các key không có giá trị để phần hiển thị dùng được .get(key, "—")
+    return {k: v for k, v in summary.items() if v is not None}
 
 
 def render_topk_chart(top_k: list[dict]):
@@ -415,12 +438,17 @@ def tab_evaluation(model_name: str):
     figures_dir = Path(CONFIG["paths"]["figures_dir"])
 
     if model_name == "svm":
-        # SVM ghi kết quả vào reports/svm_evaluation.json (do TN 3 sinh ra)
-        path = Path(CONFIG["paths"]["reports_dir"]) / "svm_evaluation.json"
+        # Kết quả SVM có thể nằm ở một trong các file sau (thử theo thứ tự):
+        #   classical_svm_summary.json  (do scripts/convert_svm_report.py sinh, cùng dạng CNN)
+        #   svm_evaluation.json         (classical_svm.py của TN 1)
+        #   classical_svm_evaluation.json (TN 3)
         raw = None
-        if path.exists():
-            with open(path, encoding="utf-8") as f:
-                raw = json.load(f)
+        for fname in ("classical_svm_summary.json", "svm_evaluation.json", "classical_svm_evaluation.json"):
+            path = Path(CONFIG["paths"]["reports_dir"]) / fname
+            if path.exists():
+                with open(path, encoding="utf-8") as f:
+                    raw = json.load(f)
+                break
         summary = normalize_svm_summary(raw) if raw else None
     else:
         summary = load_report(model_name, "summary")
@@ -447,12 +475,14 @@ def tab_evaluation(model_name: str):
         c3.metric("Recall (macro)", _fmt("test_recall_macro"))
         c4.metric("F1-score (macro)", _fmt("test_f1_macro"))
 
-        st.caption(
-            f"Đánh giá trên {summary.get('num_test_samples', '—')} ảnh test · "
-            f"{summary.get('num_misclassified', '—')} ảnh bị dự đoán sai · "
-            f"Class tốt nhất: **{summary.get('best_class', '—')}** · "
-            f"Class yếu nhất: **{summary.get('worst_class', '—')}**"
-        )
+        # SVM chưa có các trường này trong svm_evaluation.json -> ẩn dòng thay vì hiện "—"
+        if "num_test_samples" in summary:
+            st.caption(
+                f"Đánh giá trên {summary.get('num_test_samples', '—')} ảnh test · "
+                f"{summary.get('num_misclassified', '—')} ảnh bị dự đoán sai · "
+                f"Class tốt nhất: **{summary.get('best_class', '—')}** · "
+                f"Class yếu nhất: **{summary.get('worst_class', '—')}**"
+            )
 
         extra = summary.get("svm_extra") or {}
         parts = []
@@ -492,11 +522,17 @@ def tab_evaluation(model_name: str):
     st.divider()
     st.markdown("##### Biểu đồ")
 
+    # SVM có thể đặt tên file hình theo "svm_" hoặc "classical_svm_"
+    prefixes = ["svm", "classical_svm"] if model_name == "svm" else [model_name]
     figures = [
-        (f"{model_name}_training_curves.png", "Training vs Validation (Accuracy & Loss)"),
-        (f"{model_name}_confusion_matrix.png", "Confusion Matrix"),
-        (f"{model_name}_misclassified.png", "Các ảnh bị dự đoán sai"),
-        (f"{model_name}_correct_predictions.png", "Các ảnh dự đoán đúng"),
+        (f"{prefix}_{suffix}.png", caption)
+        for prefix in prefixes
+        for suffix, caption in [
+            ("training_curves", "Training vs Validation (Accuracy & Loss)"),
+            ("confusion_matrix", "Confusion Matrix"),
+            ("misclassified", "Các ảnh bị dự đoán sai"),
+            ("correct_predictions", "Các ảnh dự đoán đúng"),
+        ]
     ]
 
     any_figure = False
@@ -507,10 +543,17 @@ def tab_evaluation(model_name: str):
             any_figure = True
 
     if not any_figure:
-        st.info(
-            "Chưa có biểu đồ nào. Chạy `python -m src.training.train --model both` "
-            "rồi `python -m src.evaluation.evaluate --compare` để sinh biểu đồ."
-        )
+        if model_name == "svm":
+            st.info(
+                "Chưa có biểu đồ cho SVM. Đặt ảnh vào `reports/figures/` với tên "
+                "`svm_confusion_matrix.png` hoặc `classical_svm_confusion_matrix.png` "
+                "(và `..._misclassified.png` nếu có) để hiển thị ở đây."
+            )
+        else:
+            st.info(
+                "Chưa có biểu đồ nào. Chạy `python -m src.training.train --model both` "
+                "rồi `python -m src.evaluation.evaluate --compare` để sinh biểu đồ."
+            )
 
 
 # ---------------------------------------------------------------------------

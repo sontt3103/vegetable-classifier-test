@@ -1,6 +1,6 @@
 """Model 2 — Transfer Learning với MobileNetV2 (pretrained trên ImageNet).
 
-Lý do chọn MobileNetV2 (đã phân tích trong claude/roadmap.md của project):
+Lý do chọn MobileNetV2 (đã phân tích trong roadmap của project):
   - Dataset chỉ có ~100 ảnh/lớp — quá nhỏ để train 1 CNN sâu từ đầu mà không
     overfitting nặng. MobileNetV2 đã học sẵn đặc trưng thị giác tổng quát
     (cạnh, texture, hình dạng...) từ 1.4 triệu ảnh ImageNet.

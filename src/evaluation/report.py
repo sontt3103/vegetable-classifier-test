@@ -86,7 +86,9 @@ def _model_section(name: str, display_name: str, config: dict) -> list[str]:
             f"| Accuracy | {_fmt_pct(meta.get('final_train_accuracy'))} | {_fmt_pct(meta.get('final_val_accuracy'))} |",
             f"| Loss | {_fmt_num(meta.get('final_train_loss'))} | {_fmt_num(meta.get('final_val_loss'))} |",
             "",
-            f"![Training curves](figures/{name}_training_curves.png)\n",
+            (f"![GridSearchCV](figures/{name}_gridsearch.png)\n"
+             if (Path(config["paths"]["figures_dir"]) / f"{name}_gridsearch.png").exists() else "")
+            if "svm" in name else f"![Training curves](figures/{name}_training_curves.png)\n",
         ]
 
     if summary:
@@ -148,6 +150,7 @@ def generate_report(config: dict = CONFIG) -> Path:
     models = [
         ("baseline_cnn", "Model 1 — CNN Baseline (tự xây)"),
         ("mobilenetv2_transfer", "Model 2 — MobileNetV2 (Transfer Learning)"),
+        ("classical_svm", "Model 3 — Classical SVM (HOG + PCA + SVM)"),
     ]
 
     lines = [
@@ -203,7 +206,7 @@ def generate_report(config: dict = CONFIG) -> Path:
                 "> Cũng cần cân nhắc thời gian training, kích thước model, và tốc độ inference khi deploy.\n",
             ]
     else:
-        lines.append("_Chưa có bảng so sánh — chạy `python -m src.evaluation.evaluate --compare` trước._\n")
+        lines.append("_Chưa có bảng so sánh — chạy `python -m src.evaluation.compare_all` trước._\n")
 
     # ---------------- Phần sinh viên tự viết ----------------
     lines += [

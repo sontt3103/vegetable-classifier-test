@@ -32,3 +32,13 @@ env/
 
 # Kaggle credentials — KHÔNG BAO GIỜ commit file này
 kaggle.json
+
+# Tooling
+.claude/
+.agents/
+CLAUDE.md
+.pytest_cache/
+reports_cu/
+data/raw_fullres/
+data/raw_kaggle/
+*.pptx

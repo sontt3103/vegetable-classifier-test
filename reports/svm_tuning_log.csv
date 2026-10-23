@@ -1,0 +1,8 @@
+buoc,cau_hinh,thay_doi,train_acc,val_acc,test_acc,test_f1_macro,nhan_xet
+1,StandardScaler -> PCA200 -> CalibratedClassifierCV(SVC RBF C=10),Code gốc của nhóm,0.417,0.159,0.154,0.102,Train acc chỉ 41.7% -> lớp Calibrated làm dự đoán (argmax xác suất) sai lệch
+2,StandardScaler -> PCA200 -> SVC RBF C=10,Bỏ CalibratedClassifierCV,1.000,0.175,0.194,0.172,Train 100% nhưng val thấp: overfitting; chuẩn hoá làm 96 chiều màu bị 8100 chiều HOG lấn át
+3,PCA200 -> SVC RBF C=10,Bỏ StandardScaler,1.000,0.221,0.272,0.263,Giữ được trọng số màu (COLOR_WEIGHT=10) -> tăng 8 điểm
+4,Chỉ HOG -> PCA200 -> SVC C=10,Thử loại bỏ màu,1.000,0.154,0.159,0.144,HOG một mình rất yếu: ảnh thật có nền/góc chụp đa dạng
+5,Chỉ histogram màu RGB -> SVC C=10,Thử loại bỏ HOG,0.614,0.214,0.258,0.258,Màu là đặc trưng mạnh hơn HOG
+6,Chỉ màu (biến đổi Hellinger sqrt) -> SVC C=10,Đổi cách biểu diễn màu,0.882,0.267,0.290,0.285,Hellinger giúp các màu ít xuất hiện không bị màu nền lấn át
+7,HOG -> PCA50 + màu Hellinger x10 -> SVC RBF C=10 (GridSearchCV 12 tổ hợp x 5 fold),Kết hợp + GridSearch theo F1 CV trên train,0.981,0.316,0.350,0.342,Cấu hình cuối; chọn theo CV/validation không theo test

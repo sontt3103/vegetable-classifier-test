@@ -1,14 +1,19 @@
+# Python 3.10 - 3.13 (TensorFlow chưa hỗ trợ 3.14)
+# Đã kiểm tra: Python 3.13 + TensorFlow 2.21 + numpy 2.x + scikit-learn 1.9
+
 # Core scientific stack
-numpy>=1.24,<2.0
+numpy>=1.26
 pandas>=2.0
 matplotlib>=3.7
 seaborn>=0.12
 scikit-learn>=1.3
+scikit-image>=0.22          # HOG trong src/features/hog_features.py (TN 2)
 opencv-python-headless>=4.8
 Pillow>=10.0
+joblib>=1.3
 
-# Deep learning (CPU by default; xem TRAINING_GUIDE.md để cài bản GPU)
-tensorflow>=2.15,<2.17
+# Deep learning (CPU)
+tensorflow>=2.16
 
 # Demo application
 streamlit>=1.32
@@ -19,6 +24,9 @@ pyyaml>=6.0
 
 # Dataset download (tùy chọn — chỉ cần nếu dùng scripts/download_dataset.py)
 kaggle>=1.6
+
+# Notebook EDA
+jupyter
 
 # Testing
 pytest>=7.4

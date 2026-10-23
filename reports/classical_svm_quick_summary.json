@@ -1,0 +1,44 @@
+{
+  "model_name": "classical_svm_quick",
+  "test_accuracy": 0.38596491228070173,
+  "test_precision_macro": 0.5628787878787879,
+  "test_recall_macro": 0.39303030303030306,
+  "test_f1_macro": 0.32918192918192923,
+  "test_f1_weighted": 0.3142043142043142,
+  "num_test_samples": 57,
+  "best_class": "banana",
+  "worst_class": "bell pepper",
+  "top_confused_pairs": [
+    {
+      "true_class": "bell pepper",
+      "predicted_class": "cabbage",
+      "count": 12
+    },
+    {
+      "true_class": "beetroot",
+      "predicted_class": "cabbage",
+      "count": 11
+    },
+    {
+      "true_class": "apple",
+      "predicted_class": "cabbage",
+      "count": 8
+    },
+    {
+      "true_class": "apple",
+      "predicted_class": "banana",
+      "count": 1
+    },
+    {
+      "true_class": "banana",
+      "predicted_class": "apple",
+      "count": 1
+    }
+  ],
+  "num_misclassified": 35,
+  "overfitting_analysis": {
+    "status": "overfitting",
+    "gap": 0.5614035087719298,
+    "explanation": "Train accuracy (100.00%) cao hơn val accuracy (43.86%) khoảng 56.14%, vượt ngưỡng 10% -> mô hình có dấu hiệu overfitting."
+  }
+}

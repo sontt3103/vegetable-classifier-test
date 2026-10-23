@@ -1,44 +1,44 @@
 {
   "model_name": "baseline_cnn",
-  "test_accuracy": 0.5256723716381418,
-  "test_precision_macro": 0.5901341979912087,
-  "test_recall_macro": 0.5489766081871346,
-  "test_f1_macro": 0.5218278369959296,
-  "test_f1_weighted": 0.5074772159822639,
-  "num_test_samples": 409,
-  "best_class": "grapes",
-  "worst_class": "corn",
+  "test_accuracy": 0.4055299539170507,
+  "test_precision_macro": 0.4275682952970534,
+  "test_recall_macro": 0.40050921300921294,
+  "test_f1_macro": 0.38449026281165916,
+  "test_f1_weighted": 0.3895166179520045,
+  "num_test_samples": 434,
+  "best_class": "soy beans",
+  "worst_class": "chilli pepper",
   "top_confused_pairs": [
-    {
-      "true_class": "tomato",
-      "predicted_class": "apple",
-      "count": 11
-    },
-    {
-      "true_class": "banana",
-      "predicted_class": "apple",
-      "count": 10
-    },
-    {
-      "true_class": "carrot",
-      "predicted_class": "apple",
-      "count": 10
-    },
-    {
-      "true_class": "cucumber",
-      "predicted_class": "apple",
-      "count": 10
-    },
     {
       "true_class": "corn",
       "predicted_class": "sweetcorn",
-      "count": 9
+      "count": 5
+    },
+    {
+      "true_class": "spinach",
+      "predicted_class": "peas",
+      "count": 5
+    },
+    {
+      "true_class": "lettuce",
+      "predicted_class": "spinach",
+      "count": 4
+    },
+    {
+      "true_class": "mango",
+      "predicted_class": "potato",
+      "count": 4
+    },
+    {
+      "true_class": "onion",
+      "predicted_class": "sweetpotato",
+      "count": 4
     }
   ],
-  "num_misclassified": 194,
+  "num_misclassified": 200,
   "overfitting_analysis": {
-    "status": "good_fit",
-    "gap": -0.07548505067825317,
-    "explanation": "Gap giữa train (43.82%) và val accuracy (51.37%) chỉ -7.55%, trong ngưỡng chấp nhận được -> mô hình tổng quát hoá tốt."
+    "status": "underfitting",
+    "gap": 0.05018976330757141,
+    "explanation": "Cả train (39.81%) và val accuracy (34.79%) đều thấp -> mô hình có dấu hiệu underfitting (chưa học được đặc trưng, có thể cần tăng epochs, giảm regularization, hoặc model chưa đủ phức tạp)."
   }
 }

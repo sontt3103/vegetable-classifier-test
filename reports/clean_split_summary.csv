@@ -1,0 +1,37 @@
+﻿class,unique_images,train,validation,test
+apple,71,49,11,11
+banana,70,50,10,10
+beetroot,78,54,12,12
+bell pepper,80,56,12,12
+cabbage,82,58,12,12
+capsicum,82,58,12,12
+carrot,78,54,12,12
+cauliflower,75,53,11,11
+chilli pepper,85,59,13,13
+corn,70,50,10,10
+cucumber,86,60,13,13
+eggplant,78,54,12,12
+garlic,87,61,13,13
+ginger,65,45,10,10
+grapes,95,67,14,14
+jalepeno,83,59,12,12
+kiwi,84,58,13,13
+lemon,76,54,11,11
+lettuce,92,64,14,14
+mango,76,54,11,11
+onion,80,56,12,12
+orange,65,45,10,10
+paprika,75,53,11,11
+pear,81,57,12,12
+peas,92,64,14,14
+pineapple,93,65,14,14
+pomegranate,75,53,11,11
+potato,73,51,11,11
+raddish,77,53,12,12
+soy beans,92,64,14,14
+spinach,90,62,14,14
+sweetcorn,71,49,11,11
+sweetpotato,67,47,10,10
+tomato,90,62,14,14
+turnip,91,63,14,14
+watermelon,80,56,12,12

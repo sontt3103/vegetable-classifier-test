@@ -1,44 +1,44 @@
 {
   "model_name": "mobilenetv2_transfer",
-  "test_accuracy": 0.863080684596577,
-  "test_precision_macro": 0.9470020920485318,
-  "test_recall_macro": 0.9054093567251462,
-  "test_f1_macro": 0.9054864325652814,
-  "test_f1_weighted": 0.8687692118205174,
-  "num_test_samples": 409,
-  "best_class": "watermelon",
-  "worst_class": "banana",
+  "test_accuracy": 0.8087557603686636,
+  "test_precision_macro": 0.8165409466073811,
+  "test_recall_macro": 0.8021603396603397,
+  "test_f1_macro": 0.8019398908920834,
+  "test_f1_weighted": 0.806749064804159,
+  "num_test_samples": 434,
+  "best_class": "banana",
+  "worst_class": "paprika",
   "top_confused_pairs": [
-    {
-      "true_class": "apple",
-      "predicted_class": "banana",
-      "count": 10
-    },
-    {
-      "true_class": "carrot",
-      "predicted_class": "banana",
-      "count": 10
-    },
-    {
-      "true_class": "cucumber",
-      "predicted_class": "banana",
-      "count": 10
-    },
-    {
-      "true_class": "tomato",
-      "predicted_class": "banana",
-      "count": 10
-    },
     {
       "true_class": "corn",
       "predicted_class": "sweetcorn",
       "count": 7
+    },
+    {
+      "true_class": "bell pepper",
+      "predicted_class": "capsicum",
+      "count": 3
+    },
+    {
+      "true_class": "capsicum",
+      "predicted_class": "bell pepper",
+      "count": 3
+    },
+    {
+      "true_class": "lettuce",
+      "predicted_class": "spinach",
+      "count": 3
+    },
+    {
+      "true_class": "paprika",
+      "predicted_class": "bell pepper",
+      "count": 3
     }
   ],
-  "num_misclassified": 56,
+  "num_misclassified": 83,
   "overfitting_analysis": {
-    "status": "good_fit",
-    "gap": 0.06094396114349365,
-    "explanation": "Gap giữa train (91.88%) và val accuracy (85.79%) chỉ 6.09%, trong ngưỡng chấp nhận được -> mô hình tổng quát hoá tốt."
+    "status": "overfitting",
+    "gap": 0.11247140169143677,
+    "explanation": "Train accuracy (93.51%) cao hơn val accuracy (82.26%) khoảng 11.25%, vượt ngưỡng 10% -> mô hình có dấu hiệu overfitting (học thuộc tập train, kém tổng quát hoá)."
   }
 }

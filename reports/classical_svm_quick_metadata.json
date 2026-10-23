@@ -1,0 +1,49 @@
+{
+  "model_name": "classical_svm_quick",
+  "architecture": "HOG(9 bins, cell [8, 8]) + Color Hist(32 bins x10) -> StandardScaler -> PCA(200) -> SVC RBF",
+  "backend": "tn1",
+  "num_parameters": 53400,
+  "num_parameters_note": "SVM không có trọng số như CNN; giá trị = số support vector x số chiều PCA",
+  "n_support_vectors": 267,
+  "input_size": 128,
+  "n_features_before_pca": 8196,
+  "pca_components": 200,
+  "pca_explained_variance": 0.9148895144462585,
+  "optimizer": "GridSearchCV (scoring = f1_macro)",
+  "loss_function": "hinge (SVM)",
+  "param_grid": {
+    "C": [
+      0.1,
+      1,
+      10,
+      100
+    ],
+    "gamma": [
+      "scale",
+      "auto"
+    ]
+  },
+  "cv_folds": 5,
+  "best_params": {
+    "C": 10,
+    "gamma": "scale"
+  },
+  "best_cv_f1_macro": 0.5661871600827045,
+  "num_train_samples": 267,
+  "max_per_class": null,
+  "training_time_seconds": 5.4,
+  "gridsearch_time_seconds": 5.4,
+  "feature_extraction_time_seconds": 5.9,
+  "inference_ms_per_image": 29.31,
+  "inference_ms_per_image_classifier_only": 0.28,
+  "final_train_accuracy": 1.0,
+  "final_val_accuracy": 0.43859649122807015,
+  "class_weight_applied": true,
+  "class_names": [
+    "apple",
+    "banana",
+    "beetroot",
+    "bell pepper",
+    "cabbage"
+  ]
+}

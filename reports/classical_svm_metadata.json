@@ -1,0 +1,88 @@
+{
+  "model_name": "classical_svm",
+  "architecture": "HOG(9 hướng, cell [8, 8]) -> PCA(50) + Color Hist RGB(32 bins, Hellinger x10) -> SVC RBF",
+  "backend": "sklearn",
+  "num_parameters": 292730,
+  "num_parameters_note": "SVM không có trọng số như CNN; giá trị = số support vector x số chiều đầu vào SVM",
+  "n_support_vectors": 2005,
+  "input_size": 128,
+  "n_features_before_pca": 8196,
+  "pca_components": 50,
+  "pca_explained_variance": 0.3569900691509247,
+  "optimizer": "GridSearchCV (scoring = f1_macro)",
+  "loss_function": "hinge (SVM)",
+  "param_grid": {
+    "C": [
+      3,
+      10,
+      30
+    ],
+    "gamma": [
+      "scale"
+    ],
+    "hog_pca": [
+      50,
+      100
+    ],
+    "color_w": [
+      10,
+      20
+    ]
+  },
+  "cv_folds": 5,
+  "best_params": {
+    "C": 10,
+    "gamma": "scale",
+    "hog_pca": 50,
+    "color_w": 10
+  },
+  "best_cv_f1_macro": 0.3278740701331275,
+  "num_train_samples": 2017,
+  "max_per_class": null,
+  "training_time_seconds": 82.4,
+  "gridsearch_time_seconds": 77.8,
+  "feature_extraction_time_seconds": 9.6,
+  "inference_ms_per_image": 5.6,
+  "inference_ms_per_image_classifier_only": 0.781,
+  "final_train_accuracy": 0.9791769955379276,
+  "final_val_accuracy": 0.315668202764977,
+  "class_weight_applied": false,
+  "class_names": [
+    "apple",
+    "banana",
+    "beetroot",
+    "bell pepper",
+    "cabbage",
+    "capsicum",
+    "carrot",
+    "cauliflower",
+    "chilli pepper",
+    "corn",
+    "cucumber",
+    "eggplant",
+    "garlic",
+    "ginger",
+    "grapes",
+    "jalepeno",
+    "kiwi",
+    "lemon",
+    "lettuce",
+    "mango",
+    "onion",
+    "orange",
+    "paprika",
+    "pear",
+    "peas",
+    "pineapple",
+    "pomegranate",
+    "potato",
+    "raddish",
+    "soy beans",
+    "spinach",
+    "sweetcorn",
+    "sweetpotato",
+    "tomato",
+    "turnip",
+    "watermelon"
+  ]
+}
