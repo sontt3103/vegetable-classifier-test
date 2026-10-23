@@ -1,0 +1,34 @@
+# Data
+data/raw/*
+!data/raw/.gitkeep
+
+# Model checkpoints (thường quá lớn cho Git)
+checkpoints/*
+!checkpoints/.gitkeep
+
+# Reports generated at runtime (giữ code, bỏ output nặng)
+reports/figures/*.png
+reports/logs/*
+!reports/figures/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Environments
+venv/
+.venv/
+env/
+.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Kaggle credentials — KHÔNG BAO GIỜ commit file này
+kaggle.json

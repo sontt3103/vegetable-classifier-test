@@ -1,0 +1,44 @@
+{
+  "model_name": "mobilenetv2_transfer",
+  "test_accuracy": 0.863080684596577,
+  "test_precision_macro": 0.9470020920485318,
+  "test_recall_macro": 0.9054093567251462,
+  "test_f1_macro": 0.9054864325652814,
+  "test_f1_weighted": 0.8687692118205174,
+  "num_test_samples": 409,
+  "best_class": "watermelon",
+  "worst_class": "banana",
+  "top_confused_pairs": [
+    {
+      "true_class": "apple",
+      "predicted_class": "banana",
+      "count": 10
+    },
+    {
+      "true_class": "carrot",
+      "predicted_class": "banana",
+      "count": 10
+    },
+    {
+      "true_class": "cucumber",
+      "predicted_class": "banana",
+      "count": 10
+    },
+    {
+      "true_class": "tomato",
+      "predicted_class": "banana",
+      "count": 10
+    },
+    {
+      "true_class": "corn",
+      "predicted_class": "sweetcorn",
+      "count": 7
+    }
+  ],
+  "num_misclassified": 56,
+  "overfitting_analysis": {
+    "status": "good_fit",
+    "gap": 0.06094396114349365,
+    "explanation": "Gap giữa train (91.88%) và val accuracy (85.79%) chỉ 6.09%, trong ngưỡng chấp nhận được -> mô hình tổng quát hoá tốt."
+  }
+}

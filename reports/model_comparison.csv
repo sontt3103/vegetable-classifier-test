@@ -1,0 +1,2 @@
+Model,Test Accuracy,Precision (macro),Recall (macro),F1-score (macro),Training Time (s),Num Parameters
+mobilenetv2_transfer,0.863080684596577,0.9470020920485318,0.9054093567251462,0.9054864325652814,1916.3,2595172
