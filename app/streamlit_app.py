@@ -31,7 +31,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from configs.config import CONFIG  # noqa: E402
 from src.inference.predict import VegetableClassifier, InvalidImageError  # noqa: E402
-from src.inference.svm_predict import SVMVegetableClassifier  # noqa: E402
+from src.inference.svm_predict import SVMVegetableClassifier, find_svm_checkpoint  # noqa: E402
 
 st.set_page_config(
     page_title="Phân loại Rau Củ Quả",
@@ -151,13 +151,14 @@ def find_available_checkpoints() -> list[tuple[str, Path]]:
     ckpt_dir = Path(CONFIG["paths"]["checkpoints_dir"])
     found = []
     for name in CHECKPOINT_PRIORITY:
-        path = ckpt_dir / CHECKPOINT_FILES[name]
-        if not path.exists():
-            continue
-        # SVM chỉ dùng được khi có đủ cả PCA đã fit
-        if name == "svm" and not (ckpt_dir / "pca_model.pkl").exists():
-            continue
-        found.append((name, path))
+        if name == "svm":
+            # classical_svm.pkl (train_svm.py) hoặc cặp svm_model.pkl + pca_model.pkl
+            path = find_svm_checkpoint(ckpt_dir)
+        else:
+            path = ckpt_dir / CHECKPOINT_FILES[name]
+            path = path if path.exists() else None
+        if path is not None:
+            found.append((name, path))
     return found
 
 
@@ -386,6 +387,10 @@ def tab_model_info(classifier: VegetableClassifier, model_name: str):
             ("C tốt nhất (GridSearchCV)", params.get("C", "—")),
             ("Gamma tốt nhất (GridSearchCV)", params.get("gamma", "—")),
         ]
+        if "color_w" in params:
+            rows.append(("Trọng số màu (Hellinger)", params["color_w"]))
+        if info.get("architecture"):
+            rows.append(("Kiến trúc", info["architecture"]))
         st.dataframe(
             [{"Thông số": k, "Giá trị": str(v)} for k, v in rows],
             hide_index=True, use_container_width=True,
@@ -653,8 +658,8 @@ def main():
         )
         if not any(n == "svm" for n in options):
             st.caption(
-                "ℹ️ Chưa thấy model SVM (cần `checkpoints/svm_model.pkl` và "
-                "`checkpoints/pca_model.pkl`)."
+                "ℹ️ Chưa thấy model SVM (cần `checkpoints/classical_svm.pkl`, "
+                "hoặc cả `svm_model.pkl` + `pca_model.pkl`)."
             )
         checkpoint_path = dict(available)[selected]
 
