@@ -489,9 +489,12 @@ def plot_misclassified(paths, y_true, y_pred, class_names, save_path: Path, n=16
     fig, axes = plt.subplots(rows, cols, figsize=(cols * 3, rows * 3.3))
     for ax in np.atleast_1d(axes).ravel():
         ax.axis("off")
+    from PIL import Image
     for ax, i in zip(np.atleast_1d(axes).ravel(), wrong):
         try:
-            ax.imshow(_read_image_rgb(paths[i]))
+            img = Image.open(paths[i]).convert("RGB")
+            img.thumbnail((300, 300))   # thu nhỏ để không tràn RAM
+            ax.imshow(img)
         except Exception:
             pass
         ax.set_title(f"Thật: {class_names[y_true[i]]}\nĐoán: {class_names[y_pred[i]]}", fontsize=9, color="red")
@@ -612,6 +615,13 @@ def main():
     feat_ms = s_te / max(len(X_te), 1) * 1000 if s_te else None
 
     metrics = compute_metrics(y_te, y_pred, class_names)
+
+    from sklearn.metrics import confusion_matrix as _cm
+    metrics["confusion_matrix"] = _cm(
+        y_te, y_pred, labels=list(range(len(class_names)))
+    ).tolist()
+    metrics["classes"] = class_names
+
     with open(reports_dir / f"{name}_evaluation.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2, ensure_ascii=False)
 

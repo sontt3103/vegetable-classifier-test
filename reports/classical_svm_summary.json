@@ -1,44 +1,44 @@
 {
   "model_name": "classical_svm",
-  "test_accuracy": 0.8110599078341014,
-  "test_precision_macro": 0.8175340318722673,
-  "test_recall_macro": 0.8053603803603804,
-  "test_f1_macro": 0.8042728535004627,
-  "test_f1_weighted": 0.8082391742066902,
-  "num_test_samples": 434,
+  "test_accuracy": 0.9665738161559888,
+  "test_precision_macro": 0.9698933782267116,
+  "test_recall_macro": 0.9660493827160495,
+  "test_f1_macro": 0.9657829865066707,
+  "test_f1_weighted": 0.9660358639064109,
+  "num_test_samples": 359,
   "best_class": "watermelon",
-  "worst_class": "capsicum",
+  "worst_class": "apple",
   "top_confused_pairs": [
     {
       "true_class": "capsicum",
       "predicted_class": "bell pepper",
-      "count": 6
+      "count": 2
     },
     {
-      "true_class": "corn",
-      "predicted_class": "sweetcorn",
-      "count": 6
+      "true_class": "sweetpotato",
+      "predicted_class": "orange",
+      "count": 2
     },
     {
       "true_class": "apple",
-      "predicted_class": "tomato",
-      "count": 3
+      "predicted_class": "mango",
+      "count": 1
     },
     {
-      "true_class": "bell pepper",
-      "predicted_class": "capsicum",
-      "count": 3
+      "true_class": "apple",
+      "predicted_class": "onion",
+      "count": 1
     },
     {
-      "true_class": "capsicum",
-      "predicted_class": "tomato",
-      "count": 3
+      "true_class": "banana",
+      "predicted_class": "pear",
+      "count": 1
     }
   ],
-  "num_misclassified": 82,
+  "num_misclassified": 12,
   "overfitting_analysis": {
-    "status": "overfitting",
-    "gap": 0.14460838631996698,
-    "explanation": "Train accuracy (98.56%) cao hơn val accuracy (84.10%) khoảng 14.46%, vượt ngưỡng 10% -> mô hình có dấu hiệu overfitting."
+    "status": "good_fit",
+    "gap": 0.027767488441645782,
+    "explanation": "Gap giữa train (99.36%) và val accuracy (96.58%) chỉ 2.78%, trong ngưỡng chấp nhận được -> mô hình tổng quát hoá tốt."
   }
 }
