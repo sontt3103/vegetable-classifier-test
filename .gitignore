@@ -3,7 +3,7 @@ data/raw/*
 !data/raw/.gitkeep
 
 # Model checkpoints (thường quá lớn cho Git)
-checkpoints/*
+# checkpoints/*
 !checkpoints/.gitkeep
 
 # Reports generated at runtime (giữ code, bỏ output nặng)
