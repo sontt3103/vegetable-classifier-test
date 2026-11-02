@@ -1,1 +1,868 @@
 ﻿issue,n_files,splits,classes,cross_split,cross_class,files
+duplicate_md5,5,"test,train,validation",apple,True,False,train\apple\Image_1.jpg | validation\apple\Image_1.jpg | validation\apple\Image_10.jpg | test\apple\Image_1.jpg | test\apple\Image_10.jpg
+duplicate_md5,3,"test,train,validation",apple,True,False,train\apple\Image_2.jpg | validation\apple\Image_2.jpg | test\apple\Image_2.jpg
+duplicate_md5,3,"test,train,validation",apple,True,False,train\apple\Image_3.jpg | validation\apple\Image_3.jpg | test\apple\Image_3.jpg
+duplicate_md5,3,"test,train,validation",apple,True,False,train\apple\Image_5.JPG | validation\apple\Image_6.JPG | test\apple\Image_6.JPG
+duplicate_md5,3,"test,train,validation",apple,True,False,train\apple\Image_6.jpg | validation\apple\Image_7.jpg | test\apple\Image_7.jpg
+duplicate_md5,3,"test,train,validation",apple,True,False,train\apple\Image_9.jpg | validation\apple\Image_8.jpg | test\apple\Image_8.jpg
+duplicate_md5,6,"test,train,validation",banana,True,False,train\banana\Image_1.jpg | train\banana\Image_93.jpg | validation\banana\Image_1.jpg | validation\banana\Image_10.jpg | test\banana\Image_1.jpg | test\banana\Image_10.jpg
+duplicate_md5,4,"test,train,validation",banana,True,False,train\banana\Image_3.jpg | train\banana\Image_95.jpg | validation\banana\Image_3.jpg | test\banana\Image_3.jpg
+duplicate_md5,4,"test,train,validation",banana,True,False,train\banana\Image_4.jpg | train\banana\Image_96.jpg | validation\banana\Image_4.jpg | test\banana\Image_4.jpg
+duplicate_md5,4,"test,train,validation",banana,True,False,train\banana\Image_5.jpg | train\banana\Image_97.jpg | validation\banana\Image_5.jpg | test\banana\Image_5.jpg
+duplicate_md5,4,"test,train,validation",banana,True,False,train\banana\Image_6.jpg | train\banana\Image_98.jpg | validation\banana\Image_6.jpg | test\banana\Image_6.jpg
+duplicate_md5,2,"test,train",banana,True,False,train\banana\Image_8.jpg | test\banana\Image_8.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_1.jpg | train\beetroot\Image_91.jpg | validation\beetroot\Image_1.jpg | test\beetroot\Image_1.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_10.jpg | train\beetroot\Image_100.jpg | validation\beetroot\Image_9.jpg | test\beetroot\Image_9.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_2.jpg | train\beetroot\Image_92.jpg | validation\beetroot\Image_2.jpg | test\beetroot\Image_2.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_3.jpg | train\beetroot\Image_93.jpg | validation\beetroot\Image_3.jpg | test\beetroot\Image_3.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_4.jpg | train\beetroot\Image_94.jpg | validation\beetroot\Image_4.jpg | test\beetroot\Image_4.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_5.jpg | train\beetroot\Image_95.jpg | validation\beetroot\Image_5.jpg | test\beetroot\Image_5.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_6.jpg | train\beetroot\Image_96.jpg | validation\beetroot\Image_6.jpg | test\beetroot\Image_6.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_7.jpg | train\beetroot\Image_97.jpg | validation\beetroot\Image_7.jpg | test\beetroot\Image_7.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_8.jpg | train\beetroot\Image_98.jpg | validation\beetroot\Image_8.jpg | test\beetroot\Image_8.jpg
+duplicate_md5,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_9.jpg | train\beetroot\Image_99.jpg | validation\beetroot\Image_10.jpg | test\beetroot\Image_10.jpg
+duplicate_md5,6,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_1.jpg | train\bell pepper\Image_97.jpg | validation\bell pepper\Image_1.jpg | validation\bell pepper\Image_9.jpg | test\bell pepper\Image_1.jpg | test\bell pepper\Image_9.jpg
+duplicate_md5,4,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_100.jpg | train\bell pepper\Image_4.jpg | validation\bell pepper\Image_4.jpg | test\bell pepper\Image_4.jpg
+duplicate_md5,6,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_2.jpg | train\bell pepper\Image_98.jpg | validation\bell pepper\Image_10.jpg | validation\bell pepper\Image_2.jpg | test\bell pepper\Image_10.jpg | test\bell pepper\Image_2.jpg
+duplicate_md5,2,train,bell pepper,False,False,train\bell pepper\Image_3.jpeg | train\bell pepper\Image_99.jpeg
+duplicate_md5,4,"test,train,validation","bell pepper,capsicum",True,True,train\bell pepper\Image_30.jpg | train\capsicum\Image_4.jpg | validation\capsicum\Image_5.jpg | test\capsicum\Image_5.jpg
+duplicate_md5,2,train,bell pepper,False,False,train\bell pepper\Image_46.png | train\bell pepper\Image_67.png
+duplicate_md5,2,train,"bell pepper,paprika",False,True,train\bell pepper\Image_48.png | train\paprika\Image_86.png
+duplicate_md5,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_5.jpg | validation\bell pepper\Image_5.jpg | test\bell pepper\Image_5.jpg
+duplicate_md5,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_6.jpg | validation\bell pepper\Image_6.jpg | test\bell pepper\Image_6.jpg
+duplicate_md5,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_7.jpg | validation\bell pepper\Image_7.jpg | test\bell pepper\Image_7.jpg
+duplicate_md5,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_8.jpg | validation\bell pepper\Image_8.jpg | test\bell pepper\Image_8.jpg
+duplicate_md5,2,train,"bell pepper,capsicum",False,True,train\bell pepper\Image_88.jpg | train\capsicum\Image_81.jpg
+duplicate_md5,6,"test,train,validation",cabbage,True,False,train\cabbage\Image_1.jpg | train\cabbage\Image_91.jpg | validation\cabbage\Image_1.jpg | validation\cabbage\Image_10.jpg | test\cabbage\Image_1.jpg | test\cabbage\Image_10.jpg
+duplicate_md5,2,train,cabbage,False,False,train\cabbage\Image_10.jpg | train\cabbage\Image_100.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_2.jpg | train\cabbage\Image_92.jpg | validation\cabbage\Image_2.jpg | test\cabbage\Image_2.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_3.jpg | train\cabbage\Image_93.jpg | validation\cabbage\Image_3.jpg | test\cabbage\Image_3.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_4.jpg | train\cabbage\Image_94.jpg | validation\cabbage\Image_4.jpg | test\cabbage\Image_4.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_5.jpg | train\cabbage\Image_95.jpg | validation\cabbage\Image_7.jpg | test\cabbage\Image_7.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_6.jpg | train\cabbage\Image_96.jpg | validation\cabbage\Image_8.jpg | test\cabbage\Image_8.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_7.jpg | train\cabbage\Image_97.jpg | validation\cabbage\Image_6.jpg | test\cabbage\Image_6.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_8.jpg | train\cabbage\Image_98.jpg | validation\cabbage\Image_9.jpg | test\cabbage\Image_9.jpg
+duplicate_md5,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_9.jpg | train\cabbage\Image_99.jpg | validation\cabbage\Image_5.jpg | test\cabbage\Image_5.jpg
+duplicate_md5,6,"test,train,validation",capsicum,True,False,train\capsicum\Image_1.jpg | train\capsicum\Image_98.jpg | validation\capsicum\Image_1.jpg | validation\capsicum\Image_10.jpg | test\capsicum\Image_1.jpg | test\capsicum\Image_10.jpg
+duplicate_md5,4,"test,train,validation",capsicum,True,False,train\capsicum\Image_100.JPG | train\capsicum\Image_3.JPG | validation\capsicum\Image_3.JPG | test\capsicum\Image_3.JPG
+duplicate_md5,4,"test,train,validation",capsicum,True,False,train\capsicum\Image_2.jpg | train\capsicum\Image_99.jpg | validation\capsicum\Image_2.jpg | test\capsicum\Image_2.jpg
+duplicate_md5,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_5.jpg | validation\capsicum\Image_4.jpg | test\capsicum\Image_4.jpg
+duplicate_md5,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_6.jpg | validation\capsicum\Image_7.jpg | test\capsicum\Image_7.jpg
+duplicate_md5,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_7.jpg | validation\capsicum\Image_6.jpg | test\capsicum\Image_6.jpg
+duplicate_md5,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_8.jpg | validation\capsicum\Image_8.jpg | test\capsicum\Image_8.jpg
+duplicate_md5,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_9.jpg | validation\capsicum\Image_9.jpg | test\capsicum\Image_9.jpg
+duplicate_md5,6,"test,train,validation",carrot,True,False,train\carrot\Image_1.jpg | train\carrot\Image_94.jpg | validation\carrot\Image_1.jpg | validation\carrot\Image_10.jpg | test\carrot\Image_1.jpg | test\carrot\Image_10.jpg
+duplicate_md5,2,"test,train",carrot,True,False,train\carrot\Image_10.jpeg | test\carrot\Image_9.jpeg
+duplicate_md5,2,train,carrot,False,False,train\carrot\Image_100.jpg | train\carrot\Image_7.jpg
+duplicate_md5,3,"test,train,validation",carrot,True,False,train\carrot\Image_2.jpg | validation\carrot\Image_2.jpg | test\carrot\Image_2.jpg
+duplicate_md5,4,"test,train,validation",carrot,True,False,train\carrot\Image_3.jpg | train\carrot\Image_96.jpg | validation\carrot\Image_3.jpg | test\carrot\Image_3.jpg
+duplicate_md5,4,"test,train,validation",carrot,True,False,train\carrot\Image_5.jpg | train\carrot\Image_98.jpg | validation\carrot\Image_6.jpg | test\carrot\Image_6.jpg
+duplicate_md5,4,"test,train,validation",carrot,True,False,train\carrot\Image_6.jpg | train\carrot\Image_99.jpg | validation\carrot\Image_5.jpg | test\carrot\Image_5.jpg
+duplicate_md5,3,"test,train,validation",carrot,True,False,train\carrot\Image_8.JPG | validation\carrot\Image_7.JPG | test\carrot\Image_7.JPG
+duplicate_md5,3,"test,train,validation",carrot,True,False,train\carrot\Image_9.jpg | validation\carrot\Image_8.jpg | test\carrot\Image_8.jpg
+duplicate_md5,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_1.jpg | train\cauliflower\Image_97.jpg | validation\cauliflower\Image_1.jpg | test\cauliflower\Image_1.jpg
+duplicate_md5,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_10.jpg | validation\cauliflower\Image_9.jpg | test\cauliflower\Image_9.jpg
+duplicate_md5,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_100.jpg | train\cauliflower\Image_4.jpg | validation\cauliflower\Image_4.jpg | test\cauliflower\Image_4.jpg
+duplicate_md5,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_11.jpg | validation\cauliflower\Image_10.jpg | test\cauliflower\Image_10.jpg
+duplicate_md5,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_2.jpg | train\cauliflower\Image_98.jpg | validation\cauliflower\Image_2.jpg | test\cauliflower\Image_2.jpg
+duplicate_md5,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_3.jpg | train\cauliflower\Image_99.jpg | validation\cauliflower\Image_3.jpg | test\cauliflower\Image_3.jpg
+duplicate_md5,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_5.JPG | validation\cauliflower\Image_5.JPG | test\cauliflower\Image_5.JPG
+duplicate_md5,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_7.jpg | validation\cauliflower\Image_6.jpg | test\cauliflower\Image_6.jpg
+duplicate_md5,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_8.jpg | validation\cauliflower\Image_7.jpg | test\cauliflower\Image_7.jpg
+duplicate_md5,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_9.jpg | validation\cauliflower\Image_8.jpg | test\cauliflower\Image_8.jpg
+duplicate_md5,6,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_1.jpg | train\chilli pepper\Image_99.jpg | validation\chilli pepper\Image_1.jpg | validation\chilli pepper\Image_10.jpg | test\chilli pepper\Image_1.jpg | test\chilli pepper\Image_10.jpg
+duplicate_md5,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_3.jpg | validation\chilli pepper\Image_3.jpg | test\chilli pepper\Image_3.jpg
+duplicate_md5,2,train,"chilli pepper,jalepeno",False,True,train\chilli pepper\Image_32.jpg | train\jalepeno\Image_17.jpg
+duplicate_md5,2,train,"chilli pepper,jalepeno",False,True,train\chilli pepper\Image_38.jpg | train\jalepeno\Image_62.jpg
+duplicate_md5,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_4.jpg | validation\chilli pepper\Image_7.jpg | test\chilli pepper\Image_7.jpg
+duplicate_md5,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_5.jpg | validation\chilli pepper\Image_4.jpg | test\chilli pepper\Image_4.jpg
+duplicate_md5,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_6.png | validation\chilli pepper\Image_5.png | test\chilli pepper\Image_5.png
+duplicate_md5,2,"test,train",chilli pepper,True,False,train\chilli pepper\Image_7.jpeg | test\chilli pepper\Image_6.jpeg
+duplicate_md5,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_8.jpg | validation\chilli pepper\Image_8.jpg | test\chilli pepper\Image_8.jpg
+duplicate_md5,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_9.jpg | validation\chilli pepper\Image_9.jpg | test\chilli pepper\Image_9.jpg
+duplicate_md5,7,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_1.jpg | train\corn\Image_95.jpg | train\sweetcorn\Image_9.jpg | validation\corn\Image_1.jpg | validation\sweetcorn\Image_9.jpg | test\corn\Image_1.jpg | test\sweetcorn\Image_9.jpg
+duplicate_md5,3,"test,train,validation",corn,True,False,train\corn\Image_10.jpg | validation\corn\Image_10.jpg | test\corn\Image_10.jpg
+duplicate_md5,4,"test,train,validation",corn,True,False,train\corn\Image_100.jpg | train\corn\Image_6.jpg | validation\corn\Image_6.jpg | test\corn\Image_6.jpg
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_12.jpg | train\sweetcorn\Image_38.jpg
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_18.jpg | train\sweetcorn\Image_22.jpg
+duplicate_md5,5,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_2.jpg | train\corn\Image_96.jpg | train\sweetcorn\Image_23.jpg | validation\corn\Image_2.jpg | test\corn\Image_2.jpg
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_20.png | train\sweetcorn\Image_56.png
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_21.jpg | train\sweetcorn\Image_33.jpg
+duplicate_md5,8,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_3.jpg | train\corn\Image_97.jpg | train\sweetcorn\Image_7.jpg | train\sweetcorn\Image_99.jpg | validation\corn\Image_3.jpg | validation\sweetcorn\Image_5.jpg | test\corn\Image_3.jpg | test\sweetcorn\Image_5.jpg
+duplicate_md5,4,"test,train,validation",corn,True,False,train\corn\Image_4.jpg | train\corn\Image_98.jpg | validation\corn\Image_4.jpg | test\corn\Image_4.jpg
+duplicate_md5,4,"test,train,validation",corn,True,False,train\corn\Image_5.jpg | train\corn\Image_99.jpg | validation\corn\Image_5.jpg | test\corn\Image_5.jpg
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_52.jpg | train\sweetcorn\Image_84.jpg
+duplicate_md5,2,"train,validation",corn,True,False,train\corn\Image_7.jpg | validation\corn\Image_7.jpg
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_74.jpg | train\sweetcorn\Image_20.jpg
+duplicate_md5,4,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_8.jpg | train\sweetcorn\Image_42.jpg | validation\corn\Image_8.jpg | test\corn\Image_8.jpg
+duplicate_md5,3,"test,train,validation",corn,True,False,train\corn\Image_9.jpg | validation\corn\Image_9.jpg | test\corn\Image_9.jpg
+duplicate_md5,2,train,"corn,sweetcorn",False,True,train\corn\Image_90.jpg | train\sweetcorn\Image_46.jpg
+duplicate_md5,6,"test,train,validation",cucumber,True,False,train\cucumber\Image_1.jpg | train\cucumber\Image_93.jpg | validation\cucumber\Image_1.jpg | validation\cucumber\Image_10.jpg | test\cucumber\Image_1.jpg | test\cucumber\Image_10.jpg
+duplicate_md5,2,train,cucumber,False,False,train\cucumber\Image_100.jpg | train\cucumber\Image_8.jpg
+duplicate_md5,3,"test,train,validation",cucumber,True,False,train\cucumber\Image_11.jpg | validation\cucumber\Image_9.jpg | test\cucumber\Image_9.jpg
+duplicate_md5,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_2.jpg | train\cucumber\Image_94.jpg | validation\cucumber\Image_2.jpg | test\cucumber\Image_2.jpg
+duplicate_md5,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_3.jpg | train\cucumber\Image_95.jpg | validation\cucumber\Image_3.jpg | test\cucumber\Image_3.jpg
+duplicate_md5,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_4.jpg | train\cucumber\Image_96.jpg | validation\cucumber\Image_5.jpg | test\cucumber\Image_5.jpg
+duplicate_md5,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_5.jpg | train\cucumber\Image_97.jpg | validation\cucumber\Image_6.jpg | test\cucumber\Image_6.jpg
+duplicate_md5,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_6.jpg | train\cucumber\Image_98.jpg | validation\cucumber\Image_4.jpg | test\cucumber\Image_4.jpg
+duplicate_md5,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_7.jpg | train\cucumber\Image_99.jpg | validation\cucumber\Image_7.jpg | test\cucumber\Image_7.jpg
+duplicate_md5,3,"test,train,validation",cucumber,True,False,train\cucumber\Image_9.jpg | validation\cucumber\Image_8.jpg | test\cucumber\Image_8.jpg
+duplicate_md5,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_1.jpg | train\eggplant\Image_94.jpg | validation\eggplant\Image_1.jpg | test\eggplant\Image_1.jpg
+duplicate_md5,2,train,eggplant,False,False,train\eggplant\Image_100.jpg | train\eggplant\Image_6.jpg
+duplicate_md5,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_11.jpg | validation\eggplant\Image_7.jpg | test\eggplant\Image_7.jpg
+duplicate_md5,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_12.jpg | validation\eggplant\Image_8.jpg | test\eggplant\Image_8.jpg
+duplicate_md5,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_2.jpg | train\eggplant\Image_95.jpg | validation\eggplant\Image_2.jpg | test\eggplant\Image_2.jpg
+duplicate_md5,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_3.jpg | train\eggplant\Image_96.jpg | validation\eggplant\Image_3.jpg | test\eggplant\Image_3.jpg
+duplicate_md5,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_4.jpg | train\eggplant\Image_97.jpg | validation\eggplant\Image_5.jpg | test\eggplant\Image_5.jpg
+duplicate_md5,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_5.jpg | train\eggplant\Image_98.jpg | validation\eggplant\Image_4.jpg | test\eggplant\Image_4.jpg
+duplicate_md5,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_7.jpg | validation\eggplant\Image_9.jpg | test\eggplant\Image_9.jpg
+duplicate_md5,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_8.jpg | validation\eggplant\Image_10.jpg | test\eggplant\Image_10.jpg
+duplicate_md5,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_99.jpg | validation\eggplant\Image_6.jpg | test\eggplant\Image_6.jpg
+duplicate_md5,4,"test,train,validation",garlic,True,False,train\garlic\Image_1.jpg | train\garlic\Image_96.jpg | validation\garlic\Image_1.jpg | test\garlic\Image_1.jpg
+duplicate_md5,3,"test,train,validation",garlic,True,False,train\garlic\Image_10.jpg | validation\garlic\Image_10.jpg | test\garlic\Image_10.jpg
+duplicate_md5,4,"test,train,validation",garlic,True,False,train\garlic\Image_100.jpg | train\garlic\Image_5.jpg | validation\garlic\Image_5.jpg | test\garlic\Image_5.jpg
+duplicate_md5,4,"test,train,validation",garlic,True,False,train\garlic\Image_2.jpg | train\garlic\Image_97.jpg | validation\garlic\Image_2.jpg | test\garlic\Image_2.jpg
+duplicate_md5,4,"test,train,validation",garlic,True,False,train\garlic\Image_3.jpg | train\garlic\Image_98.jpg | validation\garlic\Image_3.jpg | test\garlic\Image_3.jpg
+duplicate_md5,4,"test,train,validation",garlic,True,False,train\garlic\Image_4.jpg | train\garlic\Image_99.jpg | validation\garlic\Image_4.jpg | test\garlic\Image_4.jpg
+duplicate_md5,3,"test,train,validation",garlic,True,False,train\garlic\Image_6.jpg | validation\garlic\Image_6.jpg | test\garlic\Image_6.jpg
+duplicate_md5,3,"test,train,validation",garlic,True,False,train\garlic\Image_7.jpg | validation\garlic\Image_7.jpg | test\garlic\Image_7.jpg
+duplicate_md5,3,"test,train,validation",garlic,True,False,train\garlic\Image_8.jpg | validation\garlic\Image_9.jpg | test\garlic\Image_9.jpg
+duplicate_md5,3,"test,train,validation",garlic,True,False,train\garlic\Image_9.jpg | validation\garlic\Image_8.jpg | test\garlic\Image_8.jpg
+duplicate_md5,6,"test,train,validation",ginger,True,False,train\ginger\Image_1.jpg | train\ginger\Image_98.jpg | validation\ginger\Image_10.jpg | validation\ginger\Image_2.jpg | test\ginger\Image_10.jpg | test\ginger\Image_2.jpg
+duplicate_md5,4,"test,train,validation",ginger,True,False,train\ginger\Image_100.jpg | train\ginger\Image_3.jpg | validation\ginger\Image_3.jpg | test\ginger\Image_3.jpg
+duplicate_md5,4,"test,train,validation",ginger,True,False,train\ginger\Image_2.jpg | train\ginger\Image_99.jpg | validation\ginger\Image_1.jpg | test\ginger\Image_1.jpg
+duplicate_md5,3,"test,train,validation",ginger,True,False,train\ginger\Image_4.jpg | validation\ginger\Image_4.jpg | test\ginger\Image_4.jpg
+duplicate_md5,3,"test,train,validation",ginger,True,False,train\ginger\Image_5.jpg | validation\ginger\Image_6.jpg | test\ginger\Image_6.jpg
+duplicate_md5,3,"test,train,validation",ginger,True,False,train\ginger\Image_6.jpg | validation\ginger\Image_5.jpg | test\ginger\Image_5.jpg
+duplicate_md5,3,"test,train,validation",ginger,True,False,train\ginger\Image_7.jpg | validation\ginger\Image_8.jpg | test\ginger\Image_8.jpg
+duplicate_md5,3,"test,train,validation",ginger,True,False,train\ginger\Image_8.jpg | validation\ginger\Image_7.jpg | test\ginger\Image_7.jpg
+duplicate_md5,3,"test,train,validation",ginger,True,False,train\ginger\Image_9.jpg | validation\ginger\Image_9.jpg | test\ginger\Image_9.jpg
+duplicate_md5,4,"test,train,validation",grapes,True,False,train\grapes\Image_1.jpg | train\grapes\Image_96.jpg | validation\grapes\Image_1.jpg | test\grapes\Image_1.jpg
+duplicate_md5,3,"test,train,validation",grapes,True,False,train\grapes\Image_10.jpg | validation\grapes\Image_6.jpg | test\grapes\Image_6.jpg
+duplicate_md5,3,"test,train",grapes,True,False,train\grapes\Image_100.jpeg | train\grapes\Image_5.jpeg | test\grapes\Image_5.jpeg
+duplicate_md5,3,"test,train,validation",grapes,True,False,train\grapes\Image_12.jpg | validation\grapes\Image_9.jpg | test\grapes\Image_9.jpg
+duplicate_md5,3,"test,train,validation",grapes,True,False,train\grapes\Image_18.jpg | validation\grapes\Image_10.jpg | test\grapes\Image_10.jpg
+duplicate_md5,4,"test,train,validation",grapes,True,False,train\grapes\Image_2.jpg | train\grapes\Image_97.jpg | validation\grapes\Image_3.jpg | test\grapes\Image_3.jpg
+duplicate_md5,4,"test,train,validation",grapes,True,False,train\grapes\Image_3.jpg | train\grapes\Image_98.jpg | validation\grapes\Image_2.jpg | test\grapes\Image_2.jpg
+duplicate_md5,4,"test,train,validation",grapes,True,False,train\grapes\Image_4.jpg | train\grapes\Image_99.jpg | validation\grapes\Image_4.jpg | test\grapes\Image_4.jpg
+duplicate_md5,3,"test,train,validation",grapes,True,False,train\grapes\Image_6.JPG | validation\grapes\Image_7.JPG | test\grapes\Image_7.JPG
+duplicate_md5,3,"test,train,validation",grapes,True,False,train\grapes\Image_9.jpg | validation\grapes\Image_8.jpg | test\grapes\Image_8.jpg
+duplicate_md5,3,"test,train",jalepeno,True,False,train\jalepeno\Image_1.jpeg | train\jalepeno\Image_98.jpeg | test\jalepeno\Image_1.jpeg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_10.jpg | validation\jalepeno\Image_7.jpg | test\jalepeno\Image_7.jpg
+duplicate_md5,4,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_100.jpg | train\jalepeno\Image_3.jpg | validation\jalepeno\Image_3.jpg | test\jalepeno\Image_3.jpg
+duplicate_md5,4,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_2.jpg | train\jalepeno\Image_99.jpg | validation\jalepeno\Image_2.jpg | test\jalepeno\Image_2.jpg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_4.jpg | validation\jalepeno\Image_4.jpg | test\jalepeno\Image_4.jpg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_5.jpg | validation\jalepeno\Image_5.jpg | test\jalepeno\Image_5.jpg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_6.jpg | validation\jalepeno\Image_6.jpg | test\jalepeno\Image_6.jpg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_7.jpg | validation\jalepeno\Image_10.jpg | test\jalepeno\Image_10.jpg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_8.jpg | validation\jalepeno\Image_8.jpg | test\jalepeno\Image_8.jpg
+duplicate_md5,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_9.jpg | validation\jalepeno\Image_9.jpg | test\jalepeno\Image_9.jpg
+duplicate_md5,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_1.jpg | train\kiwi\Image_97.jpg | validation\kiwi\Image_1.jpg | test\kiwi\Image_1.jpg
+duplicate_md5,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_10.jpg | validation\kiwi\Image_9.jpg | test\kiwi\Image_9.jpg
+duplicate_md5,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_100.jpg | train\kiwi\Image_4.jpg | validation\kiwi\Image_4.jpg | test\kiwi\Image_4.jpg
+duplicate_md5,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_2.jpg | train\kiwi\Image_98.jpg | validation\kiwi\Image_2.jpg | test\kiwi\Image_2.jpg
+duplicate_md5,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_3.jpg | train\kiwi\Image_99.jpg | validation\kiwi\Image_3.jpg | test\kiwi\Image_3.jpg
+duplicate_md5,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_5.jpg | validation\kiwi\Image_5.jpg | test\kiwi\Image_5.jpg
+duplicate_md5,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_6.jpg | validation\kiwi\Image_7.jpg | test\kiwi\Image_7.jpg
+duplicate_md5,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_7.jpg | validation\kiwi\Image_8.jpg | test\kiwi\Image_8.jpg
+duplicate_md5,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_8.jpg | validation\kiwi\Image_6.jpg | test\kiwi\Image_6.jpg
+duplicate_md5,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_9.jpg | validation\kiwi\Image_10.jpg | test\kiwi\Image_10.jpg
+duplicate_md5,4,"test,train,validation",lemon,True,False,train\lemon\Image_1.png | train\lemon\Image_95.png | validation\lemon\Image_1.png | test\lemon\Image_1.png
+duplicate_md5,3,"test,train,validation",lemon,True,False,train\lemon\Image_10.jpg | validation\lemon\Image_10.jpg | test\lemon\Image_10.jpg
+duplicate_md5,4,"test,train,validation",lemon,True,False,train\lemon\Image_100.png | train\lemon\Image_6.png | validation\lemon\Image_6.png | test\lemon\Image_6.png
+duplicate_md5,4,"test,train,validation",lemon,True,False,train\lemon\Image_2.jpg | train\lemon\Image_96.jpg | validation\lemon\Image_2.jpg | test\lemon\Image_2.jpg
+duplicate_md5,4,"test,train,validation",lemon,True,False,train\lemon\Image_3.jpg | train\lemon\Image_97.jpg | validation\lemon\Image_3.jpg | test\lemon\Image_3.jpg
+duplicate_md5,4,"test,train,validation",lemon,True,False,train\lemon\Image_4.jpg | train\lemon\Image_98.jpg | validation\lemon\Image_4.jpg | test\lemon\Image_4.jpg
+duplicate_md5,4,"test,train,validation",lemon,True,False,train\lemon\Image_5.jpg | train\lemon\Image_99.jpg | validation\lemon\Image_5.jpg | test\lemon\Image_5.jpg
+duplicate_md5,3,"test,train,validation",lemon,True,False,train\lemon\Image_7.jpg | validation\lemon\Image_7.jpg | test\lemon\Image_7.jpg
+duplicate_md5,3,"test,train,validation",lemon,True,False,train\lemon\Image_8.png | validation\lemon\Image_9.png | test\lemon\Image_9.png
+duplicate_md5,3,"test,train,validation",lemon,True,False,train\lemon\Image_9.jpg | validation\lemon\Image_8.jpg | test\lemon\Image_8.jpg
+duplicate_md5,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_1.jpg | train\lettuce\Image_96.jpg | validation\lettuce\Image_1.jpg | test\lettuce\Image_1.jpg
+duplicate_md5,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_10.jpg | validation\lettuce\Image_10.jpg | test\lettuce\Image_10.jpg
+duplicate_md5,3,"test,train",lettuce,True,False,train\lettuce\Image_100.jpeg | train\lettuce\Image_5.jpeg | test\lettuce\Image_5.jpeg
+duplicate_md5,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_2.jpg | train\lettuce\Image_97.jpg | validation\lettuce\Image_2.jpg | test\lettuce\Image_2.jpg
+duplicate_md5,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_3.jpg | train\lettuce\Image_98.jpg | validation\lettuce\Image_3.jpg | test\lettuce\Image_3.jpg
+duplicate_md5,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_4.jpg | train\lettuce\Image_99.jpg | validation\lettuce\Image_4.jpg | test\lettuce\Image_4.jpg
+duplicate_md5,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_6.jpg | validation\lettuce\Image_6.jpg | test\lettuce\Image_6.jpg
+duplicate_md5,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_7.jpg | validation\lettuce\Image_7.jpg | test\lettuce\Image_7.jpg
+duplicate_md5,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_8.jpg | validation\lettuce\Image_9.jpg | test\lettuce\Image_9.jpg
+duplicate_md5,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_9.jpg | validation\lettuce\Image_8.jpg | test\lettuce\Image_8.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_1.jpg | train\mango\Image_91.jpg | validation\mango\Image_1.jpg | test\mango\Image_1.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_10.jpg | train\mango\Image_100.jpg | validation\mango\Image_8.jpg | test\mango\Image_8.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_2.jpg | train\mango\Image_92.jpg | validation\mango\Image_2.jpg | test\mango\Image_2.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_3.jpg | train\mango\Image_93.jpg | validation\mango\Image_4.jpg | test\mango\Image_4.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_4.jpg | train\mango\Image_94.jpg | validation\mango\Image_3.jpg | test\mango\Image_3.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_5.jpg | train\mango\Image_95.jpg | validation\mango\Image_6.jpg | test\mango\Image_6.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_6.jpg | train\mango\Image_96.jpg | validation\mango\Image_5.jpg | test\mango\Image_5.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_7.jpg | train\mango\Image_97.jpg | validation\mango\Image_10.jpg | test\mango\Image_10.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_8.jpg | train\mango\Image_98.jpg | validation\mango\Image_7.jpg | test\mango\Image_7.jpg
+duplicate_md5,4,"test,train,validation",mango,True,False,train\mango\Image_9.jpg | train\mango\Image_99.jpg | validation\mango\Image_9.jpg | test\mango\Image_9.jpg
+duplicate_md5,6,"test,train,validation",onion,True,False,train\onion\Image_1.jpg | train\onion\Image_87.jpg | validation\onion\Image_1.jpg | validation\onion\Image_10.jpg | test\onion\Image_1.jpg | test\onion\Image_10.jpg
+duplicate_md5,2,train,onion,False,False,train\onion\Image_10.jpg | train\onion\Image_95.jpg
+duplicate_md5,2,train,onion,False,False,train\onion\Image_100.jpg | train\onion\Image_15.jpg
+duplicate_md5,2,train,onion,False,False,train\onion\Image_11.jpg | train\onion\Image_96.jpg
+duplicate_md5,2,train,onion,False,False,train\onion\Image_12.jpg | train\onion\Image_97.jpg
+duplicate_md5,2,train,onion,False,False,train\onion\Image_13.jpg | train\onion\Image_98.jpg
+duplicate_md5,2,train,onion,False,False,train\onion\Image_14.jpg | train\onion\Image_99.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_2.jpg | train\onion\Image_88.jpg | validation\onion\Image_2.jpg | test\onion\Image_2.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_3.jpg | train\onion\Image_89.jpg | validation\onion\Image_3.jpg | test\onion\Image_3.jpg
+duplicate_md5,3,"test,train,validation",onion,True,False,train\onion\Image_4.jpg | validation\onion\Image_4.jpg | test\onion\Image_4.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_5.jpg | train\onion\Image_90.jpg | validation\onion\Image_5.jpg | test\onion\Image_5.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_6.jpg | train\onion\Image_91.jpg | validation\onion\Image_8.jpg | test\onion\Image_8.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_7.jpg | train\onion\Image_92.jpg | validation\onion\Image_9.jpg | test\onion\Image_9.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_8.jpg | train\onion\Image_93.jpg | validation\onion\Image_6.jpg | test\onion\Image_6.jpg
+duplicate_md5,4,"test,train,validation",onion,True,False,train\onion\Image_9.png | train\onion\Image_94.png | validation\onion\Image_7.png | test\onion\Image_7.png
+duplicate_md5,6,"test,train,validation",orange,True,False,train\orange\Image_1.png | train\orange\Image_97.png | validation\orange\Image_1.png | validation\orange\Image_10.png | test\orange\Image_1.png | test\orange\Image_10.png
+duplicate_md5,4,"test,train,validation",orange,True,False,train\orange\Image_100.jpg | train\orange\Image_4.jpg | validation\orange\Image_4.jpg | test\orange\Image_4.jpg
+duplicate_md5,4,"test,train,validation",orange,True,False,train\orange\Image_2.jpg | train\orange\Image_98.jpg | validation\orange\Image_2.jpg | test\orange\Image_2.jpg
+duplicate_md5,4,"test,train,validation",orange,True,False,train\orange\Image_3.jpg | train\orange\Image_99.jpg | validation\orange\Image_3.jpg | test\orange\Image_3.jpg
+duplicate_md5,3,"test,train,validation",orange,True,False,train\orange\Image_5.jpg | validation\orange\Image_5.jpg | test\orange\Image_5.jpg
+duplicate_md5,3,"test,train,validation",orange,True,False,train\orange\Image_6.jpg | validation\orange\Image_6.jpg | test\orange\Image_6.jpg
+duplicate_md5,3,"test,train,validation",orange,True,False,train\orange\Image_7.jpg | validation\orange\Image_7.jpg | test\orange\Image_7.jpg
+duplicate_md5,2,"test,train",orange,True,False,train\orange\Image_8.jpeg | test\orange\Image_8.jpeg
+duplicate_md5,3,"test,train,validation",orange,True,False,train\orange\Image_9.jpg | validation\orange\Image_9.jpg | test\orange\Image_9.jpg
+duplicate_md5,6,"test,train,validation",paprika,True,False,train\paprika\Image_1.jpg | train\paprika\Image_94.jpg | validation\paprika\Image_1.jpg | validation\paprika\Image_10.jpg | test\paprika\Image_1.jpg | test\paprika\Image_10.jpg
+duplicate_md5,4,"test,train,validation",paprika,True,False,train\paprika\Image_100.jpg | train\paprika\Image_7.jpg | validation\paprika\Image_7.jpg | test\paprika\Image_7.jpg
+duplicate_md5,4,"test,train,validation",paprika,True,False,train\paprika\Image_2.jpg | train\paprika\Image_95.jpg | validation\paprika\Image_2.jpg | test\paprika\Image_2.jpg
+duplicate_md5,4,"test,train,validation",paprika,True,False,train\paprika\Image_3.jpg | train\paprika\Image_96.jpg | validation\paprika\Image_4.jpg | test\paprika\Image_4.jpg
+duplicate_md5,4,"test,train,validation",paprika,True,False,train\paprika\Image_4.jpg | train\paprika\Image_97.jpg | validation\paprika\Image_3.jpg | test\paprika\Image_3.jpg
+duplicate_md5,4,"test,train,validation",paprika,True,False,train\paprika\Image_5.jpg | train\paprika\Image_98.jpg | validation\paprika\Image_5.jpg | test\paprika\Image_5.jpg
+duplicate_md5,4,"test,train,validation",paprika,True,False,train\paprika\Image_6.jpg | train\paprika\Image_99.jpg | validation\paprika\Image_6.jpg | test\paprika\Image_6.jpg
+duplicate_md5,3,"test,train,validation",paprika,True,False,train\paprika\Image_8.jpg | validation\paprika\Image_8.jpg | test\paprika\Image_8.jpg
+duplicate_md5,3,"test,train,validation",paprika,True,False,train\paprika\Image_9.jpg | validation\paprika\Image_9.jpg | test\paprika\Image_9.jpg
+duplicate_md5,6,"test,train,validation",pear,True,False,train\pear\Image_1.jpg | train\pear\Image_93.jpg | validation\pear\Image_2.jpg | validation\pear\Image_8.jpg | test\pear\Image_2.jpg | test\pear\Image_8.jpg
+duplicate_md5,2,train,pear,False,False,train\pear\Image_100.jpg | train\pear\Image_9.jpg
+duplicate_md5,6,"test,train,validation",pear,True,False,train\pear\Image_2.jpg | train\pear\Image_95.jpg | validation\pear\Image_10.jpg | validation\pear\Image_3.jpg | test\pear\Image_10.jpg | test\pear\Image_3.jpg
+duplicate_md5,6,"test,train,validation",pear,True,False,train\pear\Image_3.jpg | train\pear\Image_94.jpg | validation\pear\Image_1.jpg | validation\pear\Image_9.jpg | test\pear\Image_1.jpg | test\pear\Image_9.jpg
+duplicate_md5,4,"test,train,validation",pear,True,False,train\pear\Image_4.jpg | train\pear\Image_96.jpg | validation\pear\Image_4.jpg | test\pear\Image_4.jpg
+duplicate_md5,4,"test,train,validation",pear,True,False,train\pear\Image_5.jpg | train\pear\Image_97.jpg | validation\pear\Image_5.jpg | test\pear\Image_5.jpg
+duplicate_md5,4,"test,train,validation",pear,True,False,train\pear\Image_6.jpg | train\pear\Image_98.jpg | validation\pear\Image_6.jpg | test\pear\Image_6.jpg
+duplicate_md5,4,"test,train,validation",pear,True,False,train\pear\Image_7.jpg | train\pear\Image_99.jpg | validation\pear\Image_7.jpg | test\pear\Image_7.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_1.jpg | train\peas\Image_93.jpg | validation\peas\Image_1.jpg | test\peas\Image_1.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_100.jpg | train\peas\Image_8.jpg | validation\peas\Image_8.jpg | test\peas\Image_8.jpg
+duplicate_md5,3,"test,train,validation",peas,True,False,train\peas\Image_11.jpg | validation\peas\Image_10.jpg | test\peas\Image_10.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_2.jpg | train\peas\Image_94.jpg | validation\peas\Image_2.jpg | test\peas\Image_2.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_3.jpg | train\peas\Image_95.jpg | validation\peas\Image_3.jpg | test\peas\Image_3.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_4.jpg | train\peas\Image_96.jpg | validation\peas\Image_4.jpg | test\peas\Image_4.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_5.png | train\peas\Image_97.png | validation\peas\Image_6.png | test\peas\Image_6.png
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_6.jpg | train\peas\Image_98.jpg | validation\peas\Image_5.jpg | test\peas\Image_5.jpg
+duplicate_md5,4,"test,train,validation",peas,True,False,train\peas\Image_7.jpg | train\peas\Image_99.jpg | validation\peas\Image_9.jpg | test\peas\Image_9.jpg
+duplicate_md5,3,"test,train,validation",peas,True,False,train\peas\Image_9.jpg | validation\peas\Image_7.jpg | test\peas\Image_7.jpg
+duplicate_md5,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_1.jpg | train\pineapple\Image_95.jpg | validation\pineapple\Image_1.jpg | test\pineapple\Image_1.jpg
+duplicate_md5,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_10.jpg | validation\pineapple\Image_10.jpg | test\pineapple\Image_10.jpg
+duplicate_md5,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_100.jpg | train\pineapple\Image_6.jpg | validation\pineapple\Image_4.jpg | test\pineapple\Image_4.jpg
+duplicate_md5,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_2.jpg | train\pineapple\Image_96.jpg | validation\pineapple\Image_3.jpg | test\pineapple\Image_3.jpg
+duplicate_md5,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_3.jpg | train\pineapple\Image_97.jpg | validation\pineapple\Image_6.jpg | test\pineapple\Image_6.jpg
+duplicate_md5,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_4.jpg | train\pineapple\Image_98.jpg | validation\pineapple\Image_8.jpg | test\pineapple\Image_8.jpg
+duplicate_md5,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_5.jpg | train\pineapple\Image_99.jpg | validation\pineapple\Image_9.jpg | test\pineapple\Image_9.jpg
+duplicate_md5,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_7.jpg | validation\pineapple\Image_2.jpg | test\pineapple\Image_2.jpg
+duplicate_md5,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_8.jpg | validation\pineapple\Image_5.jpg | test\pineapple\Image_5.jpg
+duplicate_md5,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_9.jpg | validation\pineapple\Image_7.jpg | test\pineapple\Image_7.jpg
+duplicate_md5,6,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_1.jpg | train\pomegranate\Image_96.jpg | validation\pomegranate\Image_1.jpg | validation\pomegranate\Image_10.jpg | test\pomegranate\Image_1.jpg | test\pomegranate\Image_10.jpg
+duplicate_md5,4,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_100.jpg | train\pomegranate\Image_5.jpg | validation\pomegranate\Image_5.jpg | test\pomegranate\Image_5.jpg
+duplicate_md5,4,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_2.jpg | train\pomegranate\Image_97.jpg | validation\pomegranate\Image_2.jpg | test\pomegranate\Image_2.jpg
+duplicate_md5,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_3.jpg | validation\pomegranate\Image_4.jpg | test\pomegranate\Image_4.jpg
+duplicate_md5,4,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_4.jpg | train\pomegranate\Image_99.jpg | validation\pomegranate\Image_3.jpg | test\pomegranate\Image_3.jpg
+duplicate_md5,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_6.jpg | validation\pomegranate\Image_6.jpg | test\pomegranate\Image_6.jpg
+duplicate_md5,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_7.jpg | validation\pomegranate\Image_7.jpg | test\pomegranate\Image_7.jpg
+duplicate_md5,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_8.jpg | validation\pomegranate\Image_9.jpg | test\pomegranate\Image_9.jpg
+duplicate_md5,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_9.jpg | validation\pomegranate\Image_8.jpg | test\pomegranate\Image_8.jpg
+duplicate_md5,4,"test,train,validation",potato,True,False,train\potato\Image_1.jpg | train\potato\Image_95.jpg | validation\potato\Image_1.jpg | test\potato\Image_1.jpg
+duplicate_md5,4,"test,train,validation",potato,True,False,train\potato\Image_100.jpg | train\potato\Image_6.jpg | validation\potato\Image_6.jpg | test\potato\Image_6.jpg
+duplicate_md5,3,"test,train,validation",potato,True,False,train\potato\Image_12.jpg | validation\potato\Image_9.jpg | test\potato\Image_9.jpg
+duplicate_md5,3,"test,train,validation",potato,True,False,train\potato\Image_13.jpg | validation\potato\Image_10.jpg | test\potato\Image_10.jpg
+duplicate_md5,4,"test,train,validation",potato,True,False,train\potato\Image_3.jpg | train\potato\Image_97.jpg | validation\potato\Image_3.jpg | test\potato\Image_3.jpg
+duplicate_md5,4,"test,train,validation",potato,True,False,train\potato\Image_4.jpg | train\potato\Image_98.jpg | validation\potato\Image_4.jpg | test\potato\Image_4.jpg
+duplicate_md5,4,"test,train,validation",potato,True,False,train\potato\Image_5.JPG | train\potato\Image_99.JPG | validation\potato\Image_5.JPG | test\potato\Image_5.JPG
+duplicate_md5,3,"test,train,validation",potato,True,False,train\potato\Image_7.jpg | validation\potato\Image_7.jpg | test\potato\Image_7.jpg
+duplicate_md5,5,"test,train,validation","potato,sweetpotato",True,True,train\potato\Image_8.jpg | train\sweetpotato\Image_100.jpg | train\sweetpotato\Image_4.jpg | validation\sweetpotato\Image_3.jpg | test\sweetpotato\Image_3.jpg
+duplicate_md5,6,"test,train,validation",raddish,True,False,train\raddish\Image_1.jpg | train\raddish\Image_97.jpg | validation\raddish\Image_1.jpg | validation\raddish\Image_10.jpg | test\raddish\Image_1.jpg | test\raddish\Image_10.jpg
+duplicate_md5,4,"test,train,validation",raddish,True,False,train\raddish\Image_100.jpg | train\raddish\Image_4.jpg | validation\raddish\Image_3.jpg | test\raddish\Image_3.jpg
+duplicate_md5,4,"test,train,validation",raddish,True,False,train\raddish\Image_2.jpg | train\raddish\Image_98.jpg | validation\raddish\Image_2.jpg | test\raddish\Image_2.jpg
+duplicate_md5,4,"test,train,validation",raddish,True,False,train\raddish\Image_3.jpg | train\raddish\Image_99.jpg | validation\raddish\Image_4.jpg | test\raddish\Image_4.jpg
+duplicate_md5,3,"test,train,validation",raddish,True,False,train\raddish\Image_5.jpg | validation\raddish\Image_6.jpg | test\raddish\Image_6.jpg
+duplicate_md5,3,"test,train,validation",raddish,True,False,train\raddish\Image_6.jpg | validation\raddish\Image_7.jpg | test\raddish\Image_7.jpg
+duplicate_md5,3,"test,train,validation",raddish,True,False,train\raddish\Image_7.jpg | validation\raddish\Image_8.jpg | test\raddish\Image_8.jpg
+duplicate_md5,2,"test,train",raddish,True,False,train\raddish\Image_8.jpeg | test\raddish\Image_9.jpeg
+duplicate_md5,3,"test,train,validation",raddish,True,False,train\raddish\Image_9.png | validation\raddish\Image_5.png | test\raddish\Image_5.png
+duplicate_md5,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_1.jpg | train\soy beans\Image_97.jpg | validation\soy beans\Image_1.jpg | test\soy beans\Image_1.jpg
+duplicate_md5,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_10.jpg | validation\soy beans\Image_9.jpg | test\soy beans\Image_9.jpg
+duplicate_md5,2,train,soy beans,False,False,train\soy beans\Image_100.jpg | train\soy beans\Image_4.jpg
+duplicate_md5,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_2.jpg | train\soy beans\Image_98.jpg | validation\soy beans\Image_2.jpg | test\soy beans\Image_2.jpg
+duplicate_md5,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_3.jpg | train\soy beans\Image_99.jpg | validation\soy beans\Image_3.jpg | test\soy beans\Image_3.jpg
+duplicate_md5,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_5.jpg | validation\soy beans\Image_5.jpg | test\soy beans\Image_5.jpg
+duplicate_md5,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_6.jpg | validation\soy beans\Image_6.jpg | test\soy beans\Image_6.jpg
+duplicate_md5,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_8.jpg | validation\soy beans\Image_10.jpg | test\soy beans\Image_10.jpg
+duplicate_md5,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_9.jpg | validation\soy beans\Image_8.jpg | test\soy beans\Image_8.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_1.jpg | train\spinach\Image_94.jpg | validation\spinach\Image_1.jpg | test\spinach\Image_1.jpg
+duplicate_md5,3,"test,train,validation",spinach,True,False,train\spinach\Image_10.jpg | validation\spinach\Image_10.jpg | test\spinach\Image_10.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_100.jpg | train\spinach\Image_7.jpg | validation\spinach\Image_7.jpg | test\spinach\Image_7.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_2.jpg | train\spinach\Image_95.jpg | validation\spinach\Image_2.jpg | test\spinach\Image_2.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_3.jpg | train\spinach\Image_96.jpg | validation\spinach\Image_3.jpg | test\spinach\Image_3.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_4.jpg | train\spinach\Image_97.jpg | validation\spinach\Image_5.jpg | test\spinach\Image_5.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_5.jpg | train\spinach\Image_98.jpg | validation\spinach\Image_4.jpg | test\spinach\Image_4.jpg
+duplicate_md5,4,"test,train,validation",spinach,True,False,train\spinach\Image_6.jpg | train\spinach\Image_99.jpg | validation\spinach\Image_6.jpg | test\spinach\Image_6.jpg
+duplicate_md5,3,"test,train,validation",spinach,True,False,train\spinach\Image_8.jpg | validation\spinach\Image_8.jpg | test\spinach\Image_8.jpg
+duplicate_md5,3,"test,train,validation",spinach,True,False,train\spinach\Image_9.jpg | validation\spinach\Image_9.jpg | test\spinach\Image_9.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_1.jpg | train\sweetcorn\Image_93.jpg | validation\sweetcorn\Image_1.jpg | test\sweetcorn\Image_1.jpg
+duplicate_md5,3,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_10.jpg | validation\sweetcorn\Image_10.jpg | test\sweetcorn\Image_10.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_100.jpg | train\sweetcorn\Image_8.jpg | validation\sweetcorn\Image_7.jpg | test\sweetcorn\Image_7.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_2.jpg | train\sweetcorn\Image_94.jpg | validation\sweetcorn\Image_2.jpg | test\sweetcorn\Image_2.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_3.jpg | train\sweetcorn\Image_95.jpg | validation\sweetcorn\Image_3.jpg | test\sweetcorn\Image_3.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_4.jpg | train\sweetcorn\Image_96.jpg | validation\sweetcorn\Image_4.jpg | test\sweetcorn\Image_4.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_5.jpg | train\sweetcorn\Image_97.jpg | validation\sweetcorn\Image_8.jpg | test\sweetcorn\Image_8.jpg
+duplicate_md5,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_6.jpg | train\sweetcorn\Image_98.jpg | validation\sweetcorn\Image_6.jpg | test\sweetcorn\Image_6.jpg
+duplicate_md5,6,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_2.jpg | train\sweetpotato\Image_98.jpg | validation\sweetpotato\Image_1.jpg | validation\sweetpotato\Image_9.jpg | test\sweetpotato\Image_1.jpg | test\sweetpotato\Image_9.jpg
+duplicate_md5,6,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_3.jpg | train\sweetpotato\Image_99.jpg | validation\sweetpotato\Image_10.jpg | validation\sweetpotato\Image_2.jpg | test\sweetpotato\Image_10.jpg | test\sweetpotato\Image_2.jpg
+duplicate_md5,3,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_5.jpg | validation\sweetpotato\Image_6.jpg | test\sweetpotato\Image_6.jpg
+duplicate_md5,5,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_97.jpg | validation\sweetpotato\Image_4.jpg | validation\sweetpotato\Image_8.jpg | test\sweetpotato\Image_4.jpg | test\sweetpotato\Image_8.jpg
+duplicate_md5,6,"test,train,validation",tomato,True,False,train\tomato\Image_1.jpg | train\tomato\Image_99.jpg | validation\tomato\Image_1.jpg | validation\tomato\Image_10.jpg | test\tomato\Image_1.jpg | test\tomato\Image_10.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_10.jpg | validation\tomato\Image_7.jpg | test\tomato\Image_7.jpg
+duplicate_md5,4,"test,train,validation",tomato,True,False,train\tomato\Image_100.jpg | train\tomato\Image_2.jpg | validation\tomato\Image_2.jpg | test\tomato\Image_2.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_3.jpg | validation\tomato\Image_3.jpg | test\tomato\Image_3.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_4.jpg | validation\tomato\Image_6.jpg | test\tomato\Image_6.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_5.jpg | validation\tomato\Image_5.jpg | test\tomato\Image_5.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_6.jpg | validation\tomato\Image_4.jpg | test\tomato\Image_4.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_7.jpg | validation\tomato\Image_9.jpg | test\tomato\Image_9.jpg
+duplicate_md5,3,"test,train,validation",tomato,True,False,train\tomato\Image_9.jpg | validation\tomato\Image_8.jpg | test\tomato\Image_8.jpg
+duplicate_md5,6,"test,train,validation",turnip,True,False,train\turnip\Image_1.jpg | train\turnip\Image_94.jpg | validation\turnip\Image_1.jpg | validation\turnip\Image_10.jpg | test\turnip\Image_1.jpg | test\turnip\Image_10.jpg
+duplicate_md5,3,"test,train,validation",turnip,True,False,train\turnip\Image_10.jpg | validation\turnip\Image_9.jpg | test\turnip\Image_9.jpg
+duplicate_md5,4,"test,train,validation",turnip,True,False,train\turnip\Image_100.jpg | train\turnip\Image_7.jpg | validation\turnip\Image_7.jpg | test\turnip\Image_7.jpg
+duplicate_md5,4,"test,train,validation",turnip,True,False,train\turnip\Image_2.jpg | train\turnip\Image_95.jpg | validation\turnip\Image_2.jpg | test\turnip\Image_2.jpg
+duplicate_md5,4,"test,train,validation",turnip,True,False,train\turnip\Image_3.jpg | train\turnip\Image_96.jpg | validation\turnip\Image_3.jpg | test\turnip\Image_3.jpg
+duplicate_md5,4,"test,train,validation",turnip,True,False,train\turnip\Image_4.jpg | train\turnip\Image_97.jpg | validation\turnip\Image_4.jpg | test\turnip\Image_4.jpg
+duplicate_md5,4,"test,train,validation",turnip,True,False,train\turnip\Image_5.jpg | train\turnip\Image_98.jpg | validation\turnip\Image_6.jpg | test\turnip\Image_6.jpg
+duplicate_md5,4,"test,train,validation",turnip,True,False,train\turnip\Image_6.jpg | train\turnip\Image_99.jpg | validation\turnip\Image_5.jpg | test\turnip\Image_5.jpg
+duplicate_md5,3,"test,train,validation",turnip,True,False,train\turnip\Image_9.jpg | validation\turnip\Image_8.jpg | test\turnip\Image_8.jpg
+duplicate_md5,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_1.jpg | train\watermelon\Image_97.jpg | validation\watermelon\Image_1.jpg | test\watermelon\Image_1.jpg
+duplicate_md5,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_10.jpg | validation\watermelon\Image_10.jpg | test\watermelon\Image_10.jpg
+duplicate_md5,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_100.jpg | train\watermelon\Image_4.jpg | validation\watermelon\Image_4.jpg | test\watermelon\Image_4.jpg
+duplicate_md5,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_2.jpg | train\watermelon\Image_98.jpg | validation\watermelon\Image_2.jpg | test\watermelon\Image_2.jpg
+duplicate_md5,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_3.jpg | train\watermelon\Image_99.jpg | validation\watermelon\Image_3.jpg | test\watermelon\Image_3.jpg
+duplicate_md5,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_5.jpg | validation\watermelon\Image_5.jpg | test\watermelon\Image_5.jpg
+duplicate_md5,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_6.jpg | validation\watermelon\Image_6.jpg | test\watermelon\Image_6.jpg
+duplicate_md5,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_7.jpg | validation\watermelon\Image_7.jpg | test\watermelon\Image_7.jpg
+duplicate_md5,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_8.jpg | validation\watermelon\Image_8.jpg | test\watermelon\Image_8.jpg
+duplicate_md5,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_9.jpg | validation\watermelon\Image_9.jpg | test\watermelon\Image_9.jpg
+duplicate_md5,2,"test,validation",apple,True,False,validation\apple\Image_4.jpg | test\apple\Image_4.jpg
+duplicate_md5,2,"test,validation",apple,True,False,validation\apple\Image_5.jpg | test\apple\Image_5.jpg
+duplicate_md5,2,"test,validation",apple,True,False,validation\apple\Image_9.jpg | test\apple\Image_9.jpg
+duplicate_md5,2,"test,validation",banana,True,False,validation\banana\Image_2.jpg | test\banana\Image_2.jpg
+duplicate_md5,2,"test,validation",banana,True,False,validation\banana\Image_9.jpg | test\banana\Image_9.jpg
+duplicate_md5,2,"test,validation",carrot,True,False,validation\carrot\Image_4.png | test\carrot\Image_4.png
+duplicate_md5,2,"test,validation",chilli pepper,True,False,validation\chilli pepper\Image_2.png | test\chilli pepper\Image_2.png
+duplicate_md5,2,"test,validation",potato,True,False,validation\potato\Image_2.jpg | test\potato\Image_2.jpg
+duplicate_md5,2,"test,validation",potato,True,False,validation\potato\Image_8.jpg | test\potato\Image_8.jpg
+duplicate_md5,2,"test,validation",soy beans,True,False,validation\soy beans\Image_4.jpg | test\soy beans\Image_4.jpg
+duplicate_md5,2,"test,validation",soy beans,True,False,validation\soy beans\Image_7.jpg | test\soy beans\Image_7.jpg
+duplicate_md5,2,"test,validation",sweetpotato,True,False,validation\sweetpotato\Image_5.jpg | test\sweetpotato\Image_5.jpg
+duplicate_md5,2,"test,validation",sweetpotato,True,False,validation\sweetpotato\Image_7.jpg | test\sweetpotato\Image_7.jpg
+duplicate_ahash,5,"test,train,validation",apple,True,False,train\apple\Image_1.jpg | validation\apple\Image_1.jpg | validation\apple\Image_10.jpg | test\apple\Image_1.jpg | test\apple\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",apple,True,False,train\apple\Image_2.jpg | validation\apple\Image_2.jpg | test\apple\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",apple,True,False,train\apple\Image_3.jpg | validation\apple\Image_3.jpg | test\apple\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",apple,True,False,train\apple\Image_5.JPG | validation\apple\Image_6.JPG | test\apple\Image_6.JPG
+duplicate_ahash,3,"test,train,validation",apple,True,False,train\apple\Image_6.jpg | validation\apple\Image_7.jpg | test\apple\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",apple,True,False,train\apple\Image_9.jpg | validation\apple\Image_8.jpg | test\apple\Image_8.jpg
+duplicate_ahash,6,"test,train,validation",banana,True,False,train\banana\Image_1.jpg | train\banana\Image_93.jpg | validation\banana\Image_1.jpg | validation\banana\Image_10.jpg | test\banana\Image_1.jpg | test\banana\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",banana,True,False,train\banana\Image_100.jpg | train\banana\Image_8.jpg | validation\banana\Image_8.jpg | test\banana\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",banana,True,False,train\banana\Image_3.jpg | train\banana\Image_95.jpg | validation\banana\Image_3.jpg | test\banana\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",banana,True,False,train\banana\Image_4.jpg | train\banana\Image_96.jpg | validation\banana\Image_4.jpg | test\banana\Image_4.jpg
+duplicate_ahash,2,train,banana,False,False,train\banana\Image_41.jpg | train\banana\Image_53.png
+duplicate_ahash,4,"test,train,validation",banana,True,False,train\banana\Image_5.jpg | train\banana\Image_97.jpg | validation\banana\Image_5.jpg | test\banana\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",banana,True,False,train\banana\Image_6.jpg | train\banana\Image_98.jpg | validation\banana\Image_6.jpg | test\banana\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_1.jpg | train\beetroot\Image_91.jpg | validation\beetroot\Image_1.jpg | test\beetroot\Image_1.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_10.jpg | train\beetroot\Image_100.jpg | validation\beetroot\Image_9.jpg | test\beetroot\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_2.jpg | train\beetroot\Image_92.jpg | validation\beetroot\Image_2.jpg | test\beetroot\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_3.jpg | train\beetroot\Image_93.jpg | validation\beetroot\Image_3.jpg | test\beetroot\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_4.jpg | train\beetroot\Image_94.jpg | validation\beetroot\Image_4.jpg | test\beetroot\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_5.jpg | train\beetroot\Image_95.jpg | validation\beetroot\Image_5.jpg | test\beetroot\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_6.jpg | train\beetroot\Image_96.jpg | validation\beetroot\Image_6.jpg | test\beetroot\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_7.jpg | train\beetroot\Image_97.jpg | validation\beetroot\Image_7.jpg | test\beetroot\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_8.jpg | train\beetroot\Image_98.jpg | validation\beetroot\Image_8.jpg | test\beetroot\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",beetroot,True,False,train\beetroot\Image_9.jpg | train\beetroot\Image_99.jpg | validation\beetroot\Image_10.jpg | test\beetroot\Image_10.jpg
+duplicate_ahash,6,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_1.jpg | train\bell pepper\Image_97.jpg | validation\bell pepper\Image_1.jpg | validation\bell pepper\Image_9.jpg | test\bell pepper\Image_1.jpg | test\bell pepper\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_100.jpg | train\bell pepper\Image_4.jpg | validation\bell pepper\Image_4.jpg | test\bell pepper\Image_4.jpg
+duplicate_ahash,6,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_2.jpg | train\bell pepper\Image_98.jpg | validation\bell pepper\Image_10.jpg | validation\bell pepper\Image_2.jpg | test\bell pepper\Image_10.jpg | test\bell pepper\Image_2.jpg
+duplicate_ahash,3,"test,train",bell pepper,True,False,train\bell pepper\Image_3.jpeg | train\bell pepper\Image_99.jpeg | test\bell pepper\Image_3.jpeg
+duplicate_ahash,4,"test,train,validation","bell pepper,capsicum",True,True,train\bell pepper\Image_30.jpg | train\capsicum\Image_4.jpg | validation\capsicum\Image_5.jpg | test\capsicum\Image_5.jpg
+duplicate_ahash,2,train,"bell pepper,capsicum",False,True,train\bell pepper\Image_44.jpg | train\capsicum\Image_47.jpg
+duplicate_ahash,2,train,bell pepper,False,False,train\bell pepper\Image_46.png | train\bell pepper\Image_67.png
+duplicate_ahash,2,train,"bell pepper,paprika",False,True,train\bell pepper\Image_48.png | train\paprika\Image_86.png
+duplicate_ahash,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_5.jpg | validation\bell pepper\Image_5.jpg | test\bell pepper\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_6.jpg | validation\bell pepper\Image_6.jpg | test\bell pepper\Image_6.jpg
+duplicate_ahash,6,"test,train,validation","bell pepper,capsicum",True,True,train\bell pepper\Image_7.jpg | train\capsicum\Image_7.jpg | validation\bell pepper\Image_7.jpg | validation\capsicum\Image_6.jpg | test\bell pepper\Image_7.jpg | test\capsicum\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",bell pepper,True,False,train\bell pepper\Image_8.jpg | validation\bell pepper\Image_8.jpg | test\bell pepper\Image_8.jpg
+duplicate_ahash,2,train,"bell pepper,capsicum",False,True,train\bell pepper\Image_88.jpg | train\capsicum\Image_81.jpg
+duplicate_ahash,6,"test,train,validation",cabbage,True,False,train\cabbage\Image_1.jpg | train\cabbage\Image_91.jpg | validation\cabbage\Image_1.jpg | validation\cabbage\Image_10.jpg | test\cabbage\Image_1.jpg | test\cabbage\Image_10.jpg
+duplicate_ahash,2,train,cabbage,False,False,train\cabbage\Image_10.jpg | train\cabbage\Image_100.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_2.jpg | train\cabbage\Image_92.jpg | validation\cabbage\Image_2.jpg | test\cabbage\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_3.jpg | train\cabbage\Image_93.jpg | validation\cabbage\Image_3.jpg | test\cabbage\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_4.jpg | train\cabbage\Image_94.jpg | validation\cabbage\Image_4.jpg | test\cabbage\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_5.jpg | train\cabbage\Image_95.jpg | validation\cabbage\Image_7.jpg | test\cabbage\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_6.jpg | train\cabbage\Image_96.jpg | validation\cabbage\Image_8.jpg | test\cabbage\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_7.jpg | train\cabbage\Image_97.jpg | validation\cabbage\Image_6.jpg | test\cabbage\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_8.jpg | train\cabbage\Image_98.jpg | validation\cabbage\Image_9.jpg | test\cabbage\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",cabbage,True,False,train\cabbage\Image_9.jpg | train\cabbage\Image_99.jpg | validation\cabbage\Image_5.jpg | test\cabbage\Image_5.jpg
+duplicate_ahash,6,"test,train,validation",capsicum,True,False,train\capsicum\Image_1.jpg | train\capsicum\Image_98.jpg | validation\capsicum\Image_1.jpg | validation\capsicum\Image_10.jpg | test\capsicum\Image_1.jpg | test\capsicum\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",capsicum,True,False,train\capsicum\Image_100.JPG | train\capsicum\Image_3.JPG | validation\capsicum\Image_3.JPG | test\capsicum\Image_3.JPG
+duplicate_ahash,4,"test,train,validation",capsicum,True,False,train\capsicum\Image_2.jpg | train\capsicum\Image_99.jpg | validation\capsicum\Image_2.jpg | test\capsicum\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_5.jpg | validation\capsicum\Image_4.jpg | test\capsicum\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_6.jpg | validation\capsicum\Image_7.jpg | test\capsicum\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_8.jpg | validation\capsicum\Image_8.jpg | test\capsicum\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",capsicum,True,False,train\capsicum\Image_9.jpg | validation\capsicum\Image_9.jpg | test\capsicum\Image_9.jpg
+duplicate_ahash,6,"test,train,validation",carrot,True,False,train\carrot\Image_1.jpg | train\carrot\Image_94.jpg | validation\carrot\Image_1.jpg | validation\carrot\Image_10.jpg | test\carrot\Image_1.jpg | test\carrot\Image_10.jpg
+duplicate_ahash,2,"test,train",carrot,True,False,train\carrot\Image_10.jpeg | test\carrot\Image_9.jpeg
+duplicate_ahash,2,train,carrot,False,False,train\carrot\Image_100.jpg | train\carrot\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",carrot,True,False,train\carrot\Image_2.jpg | validation\carrot\Image_2.jpg | test\carrot\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",carrot,True,False,train\carrot\Image_3.jpg | train\carrot\Image_96.jpg | validation\carrot\Image_3.jpg | test\carrot\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",carrot,True,False,train\carrot\Image_5.jpg | train\carrot\Image_98.jpg | validation\carrot\Image_6.jpg | test\carrot\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",carrot,True,False,train\carrot\Image_6.jpg | train\carrot\Image_99.jpg | validation\carrot\Image_5.jpg | test\carrot\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",carrot,True,False,train\carrot\Image_8.JPG | validation\carrot\Image_7.JPG | test\carrot\Image_7.JPG
+duplicate_ahash,3,"test,train,validation",carrot,True,False,train\carrot\Image_9.jpg | validation\carrot\Image_8.jpg | test\carrot\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_1.jpg | train\cauliflower\Image_97.jpg | validation\cauliflower\Image_1.jpg | test\cauliflower\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_10.jpg | validation\cauliflower\Image_9.jpg | test\cauliflower\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_100.jpg | train\cauliflower\Image_4.jpg | validation\cauliflower\Image_4.jpg | test\cauliflower\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_11.jpg | validation\cauliflower\Image_10.jpg | test\cauliflower\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_2.jpg | train\cauliflower\Image_98.jpg | validation\cauliflower\Image_2.jpg | test\cauliflower\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_3.jpg | train\cauliflower\Image_99.jpg | validation\cauliflower\Image_3.jpg | test\cauliflower\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_5.JPG | validation\cauliflower\Image_5.JPG | test\cauliflower\Image_5.JPG
+duplicate_ahash,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_7.jpg | validation\cauliflower\Image_6.jpg | test\cauliflower\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_8.jpg | validation\cauliflower\Image_7.jpg | test\cauliflower\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",cauliflower,True,False,train\cauliflower\Image_9.jpg | validation\cauliflower\Image_8.jpg | test\cauliflower\Image_8.jpg
+duplicate_ahash,6,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_1.jpg | train\chilli pepper\Image_99.jpg | validation\chilli pepper\Image_1.jpg | validation\chilli pepper\Image_10.jpg | test\chilli pepper\Image_1.jpg | test\chilli pepper\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_3.jpg | validation\chilli pepper\Image_3.jpg | test\chilli pepper\Image_3.jpg
+duplicate_ahash,2,train,"chilli pepper,jalepeno",False,True,train\chilli pepper\Image_32.jpg | train\jalepeno\Image_17.jpg
+duplicate_ahash,2,train,"chilli pepper,jalepeno",False,True,train\chilli pepper\Image_38.jpg | train\jalepeno\Image_62.jpg
+duplicate_ahash,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_4.jpg | validation\chilli pepper\Image_7.jpg | test\chilli pepper\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_5.jpg | validation\chilli pepper\Image_4.jpg | test\chilli pepper\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_6.png | validation\chilli pepper\Image_5.png | test\chilli pepper\Image_5.png
+duplicate_ahash,2,"test,train",chilli pepper,True,False,train\chilli pepper\Image_7.jpeg | test\chilli pepper\Image_6.jpeg
+duplicate_ahash,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_8.jpg | validation\chilli pepper\Image_8.jpg | test\chilli pepper\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",chilli pepper,True,False,train\chilli pepper\Image_9.jpg | validation\chilli pepper\Image_9.jpg | test\chilli pepper\Image_9.jpg
+duplicate_ahash,7,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_1.jpg | train\corn\Image_95.jpg | train\sweetcorn\Image_9.jpg | validation\corn\Image_1.jpg | validation\sweetcorn\Image_9.jpg | test\corn\Image_1.jpg | test\sweetcorn\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",corn,True,False,train\corn\Image_10.jpg | validation\corn\Image_10.jpg | test\corn\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",corn,True,False,train\corn\Image_100.jpg | train\corn\Image_6.jpg | validation\corn\Image_6.jpg | test\corn\Image_6.jpg
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_12.jpg | train\sweetcorn\Image_38.jpg
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_18.jpg | train\sweetcorn\Image_22.jpg
+duplicate_ahash,5,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_2.jpg | train\corn\Image_96.jpg | train\sweetcorn\Image_23.jpg | validation\corn\Image_2.jpg | test\corn\Image_2.jpg
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_20.png | train\sweetcorn\Image_56.png
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_21.jpg | train\sweetcorn\Image_33.jpg
+duplicate_ahash,8,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_3.jpg | train\corn\Image_97.jpg | train\sweetcorn\Image_7.jpg | train\sweetcorn\Image_99.jpg | validation\corn\Image_3.jpg | validation\sweetcorn\Image_5.jpg | test\corn\Image_3.jpg | test\sweetcorn\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",corn,True,False,train\corn\Image_4.jpg | train\corn\Image_98.jpg | validation\corn\Image_4.jpg | test\corn\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",corn,True,False,train\corn\Image_5.jpg | train\corn\Image_99.jpg | validation\corn\Image_5.jpg | test\corn\Image_5.jpg
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_52.jpg | train\sweetcorn\Image_84.jpg
+duplicate_ahash,3,"test,train,validation",corn,True,False,train\corn\Image_7.jpg | validation\corn\Image_7.jpg | test\corn\Image_7.jpg
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_74.jpg | train\sweetcorn\Image_20.jpg
+duplicate_ahash,4,"test,train,validation","corn,sweetcorn",True,True,train\corn\Image_8.jpg | train\sweetcorn\Image_42.jpg | validation\corn\Image_8.jpg | test\corn\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",corn,True,False,train\corn\Image_9.jpg | validation\corn\Image_9.jpg | test\corn\Image_9.jpg
+duplicate_ahash,2,train,"corn,sweetcorn",False,True,train\corn\Image_90.jpg | train\sweetcorn\Image_46.jpg
+duplicate_ahash,6,"test,train,validation",cucumber,True,False,train\cucumber\Image_1.jpg | train\cucumber\Image_93.jpg | validation\cucumber\Image_1.jpg | validation\cucumber\Image_10.jpg | test\cucumber\Image_1.jpg | test\cucumber\Image_10.jpg
+duplicate_ahash,2,train,cucumber,False,False,train\cucumber\Image_100.jpg | train\cucumber\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",cucumber,True,False,train\cucumber\Image_11.jpg | validation\cucumber\Image_9.jpg | test\cucumber\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_2.jpg | train\cucumber\Image_94.jpg | validation\cucumber\Image_2.jpg | test\cucumber\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_3.jpg | train\cucumber\Image_95.jpg | validation\cucumber\Image_3.jpg | test\cucumber\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_4.jpg | train\cucumber\Image_96.jpg | validation\cucumber\Image_5.jpg | test\cucumber\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_5.jpg | train\cucumber\Image_97.jpg | validation\cucumber\Image_6.jpg | test\cucumber\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_6.jpg | train\cucumber\Image_98.jpg | validation\cucumber\Image_4.jpg | test\cucumber\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",cucumber,True,False,train\cucumber\Image_7.jpg | train\cucumber\Image_99.jpg | validation\cucumber\Image_7.jpg | test\cucumber\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",cucumber,True,False,train\cucumber\Image_9.jpg | validation\cucumber\Image_8.jpg | test\cucumber\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_1.jpg | train\eggplant\Image_94.jpg | validation\eggplant\Image_1.jpg | test\eggplant\Image_1.jpg
+duplicate_ahash,2,train,eggplant,False,False,train\eggplant\Image_100.jpg | train\eggplant\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_11.jpg | validation\eggplant\Image_7.jpg | test\eggplant\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_12.jpg | validation\eggplant\Image_8.jpg | test\eggplant\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_2.jpg | train\eggplant\Image_95.jpg | validation\eggplant\Image_2.jpg | test\eggplant\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_3.jpg | train\eggplant\Image_96.jpg | validation\eggplant\Image_3.jpg | test\eggplant\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_4.jpg | train\eggplant\Image_97.jpg | validation\eggplant\Image_5.jpg | test\eggplant\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",eggplant,True,False,train\eggplant\Image_5.jpg | train\eggplant\Image_98.jpg | validation\eggplant\Image_4.jpg | test\eggplant\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_7.jpg | validation\eggplant\Image_9.jpg | test\eggplant\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_8.jpg | validation\eggplant\Image_10.jpg | test\eggplant\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",eggplant,True,False,train\eggplant\Image_99.jpg | validation\eggplant\Image_6.jpg | test\eggplant\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",garlic,True,False,train\garlic\Image_1.jpg | train\garlic\Image_96.jpg | validation\garlic\Image_1.jpg | test\garlic\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",garlic,True,False,train\garlic\Image_10.jpg | validation\garlic\Image_10.jpg | test\garlic\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",garlic,True,False,train\garlic\Image_100.jpg | train\garlic\Image_5.jpg | validation\garlic\Image_5.jpg | test\garlic\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",garlic,True,False,train\garlic\Image_2.jpg | train\garlic\Image_97.jpg | validation\garlic\Image_2.jpg | test\garlic\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",garlic,True,False,train\garlic\Image_3.jpg | train\garlic\Image_98.jpg | validation\garlic\Image_3.jpg | test\garlic\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",garlic,True,False,train\garlic\Image_4.jpg | train\garlic\Image_99.jpg | validation\garlic\Image_4.jpg | test\garlic\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",garlic,True,False,train\garlic\Image_6.jpg | validation\garlic\Image_6.jpg | test\garlic\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",garlic,True,False,train\garlic\Image_7.jpg | validation\garlic\Image_7.jpg | test\garlic\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",garlic,True,False,train\garlic\Image_8.jpg | validation\garlic\Image_9.jpg | test\garlic\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",garlic,True,False,train\garlic\Image_9.jpg | validation\garlic\Image_8.jpg | test\garlic\Image_8.jpg
+duplicate_ahash,6,"test,train,validation",ginger,True,False,train\ginger\Image_1.jpg | train\ginger\Image_98.jpg | validation\ginger\Image_10.jpg | validation\ginger\Image_2.jpg | test\ginger\Image_10.jpg | test\ginger\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",ginger,True,False,train\ginger\Image_100.jpg | train\ginger\Image_3.jpg | validation\ginger\Image_3.jpg | test\ginger\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",ginger,True,False,train\ginger\Image_2.jpg | train\ginger\Image_99.jpg | validation\ginger\Image_1.jpg | test\ginger\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",ginger,True,False,train\ginger\Image_4.jpg | validation\ginger\Image_4.jpg | test\ginger\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",ginger,True,False,train\ginger\Image_5.jpg | validation\ginger\Image_6.jpg | test\ginger\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",ginger,True,False,train\ginger\Image_6.jpg | validation\ginger\Image_5.jpg | test\ginger\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",ginger,True,False,train\ginger\Image_7.jpg | validation\ginger\Image_8.jpg | test\ginger\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",ginger,True,False,train\ginger\Image_8.jpg | validation\ginger\Image_7.jpg | test\ginger\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",ginger,True,False,train\ginger\Image_9.jpg | validation\ginger\Image_9.jpg | test\ginger\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",grapes,True,False,train\grapes\Image_1.jpg | train\grapes\Image_96.jpg | validation\grapes\Image_1.jpg | test\grapes\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",grapes,True,False,train\grapes\Image_10.jpg | validation\grapes\Image_6.jpg | test\grapes\Image_6.jpg
+duplicate_ahash,3,"test,train",grapes,True,False,train\grapes\Image_100.jpeg | train\grapes\Image_5.jpeg | test\grapes\Image_5.jpeg
+duplicate_ahash,3,"test,train,validation",grapes,True,False,train\grapes\Image_12.jpg | validation\grapes\Image_9.jpg | test\grapes\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",grapes,True,False,train\grapes\Image_18.jpg | validation\grapes\Image_10.jpg | test\grapes\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",grapes,True,False,train\grapes\Image_2.jpg | train\grapes\Image_97.jpg | validation\grapes\Image_3.jpg | test\grapes\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",grapes,True,False,train\grapes\Image_3.jpg | train\grapes\Image_98.jpg | validation\grapes\Image_2.jpg | test\grapes\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",grapes,True,False,train\grapes\Image_4.jpg | train\grapes\Image_99.jpg | validation\grapes\Image_4.jpg | test\grapes\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",grapes,True,False,train\grapes\Image_6.JPG | validation\grapes\Image_7.JPG | test\grapes\Image_7.JPG
+duplicate_ahash,3,"test,train,validation",grapes,True,False,train\grapes\Image_9.jpg | validation\grapes\Image_8.jpg | test\grapes\Image_8.jpg
+duplicate_ahash,3,"test,train",jalepeno,True,False,train\jalepeno\Image_1.jpeg | train\jalepeno\Image_98.jpeg | test\jalepeno\Image_1.jpeg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_10.jpg | validation\jalepeno\Image_7.jpg | test\jalepeno\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_100.jpg | train\jalepeno\Image_3.jpg | validation\jalepeno\Image_3.jpg | test\jalepeno\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_2.jpg | train\jalepeno\Image_99.jpg | validation\jalepeno\Image_2.jpg | test\jalepeno\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_4.jpg | validation\jalepeno\Image_4.jpg | test\jalepeno\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_5.jpg | validation\jalepeno\Image_5.jpg | test\jalepeno\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_6.jpg | validation\jalepeno\Image_6.jpg | test\jalepeno\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_7.jpg | validation\jalepeno\Image_10.jpg | test\jalepeno\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_8.jpg | validation\jalepeno\Image_8.jpg | test\jalepeno\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",jalepeno,True,False,train\jalepeno\Image_9.jpg | validation\jalepeno\Image_9.jpg | test\jalepeno\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_1.jpg | train\kiwi\Image_97.jpg | validation\kiwi\Image_1.jpg | test\kiwi\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_10.jpg | validation\kiwi\Image_9.jpg | test\kiwi\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_100.jpg | train\kiwi\Image_4.jpg | validation\kiwi\Image_4.jpg | test\kiwi\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_2.jpg | train\kiwi\Image_98.jpg | validation\kiwi\Image_2.jpg | test\kiwi\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",kiwi,True,False,train\kiwi\Image_3.jpg | train\kiwi\Image_99.jpg | validation\kiwi\Image_3.jpg | test\kiwi\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_5.jpg | validation\kiwi\Image_5.jpg | test\kiwi\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_6.jpg | validation\kiwi\Image_7.jpg | test\kiwi\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_7.jpg | validation\kiwi\Image_8.jpg | test\kiwi\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_8.jpg | validation\kiwi\Image_6.jpg | test\kiwi\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",kiwi,True,False,train\kiwi\Image_9.jpg | validation\kiwi\Image_10.jpg | test\kiwi\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",lemon,True,False,train\lemon\Image_1.png | train\lemon\Image_95.png | validation\lemon\Image_1.png | test\lemon\Image_1.png
+duplicate_ahash,3,"test,train,validation",lemon,True,False,train\lemon\Image_10.jpg | validation\lemon\Image_10.jpg | test\lemon\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",lemon,True,False,train\lemon\Image_100.png | train\lemon\Image_6.png | validation\lemon\Image_6.png | test\lemon\Image_6.png
+duplicate_ahash,4,"test,train,validation",lemon,True,False,train\lemon\Image_2.jpg | train\lemon\Image_96.jpg | validation\lemon\Image_2.jpg | test\lemon\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",lemon,True,False,train\lemon\Image_3.jpg | train\lemon\Image_97.jpg | validation\lemon\Image_3.jpg | test\lemon\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",lemon,True,False,train\lemon\Image_4.jpg | train\lemon\Image_98.jpg | validation\lemon\Image_4.jpg | test\lemon\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",lemon,True,False,train\lemon\Image_5.jpg | train\lemon\Image_99.jpg | validation\lemon\Image_5.jpg | test\lemon\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",lemon,True,False,train\lemon\Image_7.jpg | validation\lemon\Image_7.jpg | test\lemon\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",lemon,True,False,train\lemon\Image_8.png | validation\lemon\Image_9.png | test\lemon\Image_9.png
+duplicate_ahash,3,"test,train,validation",lemon,True,False,train\lemon\Image_9.jpg | validation\lemon\Image_8.jpg | test\lemon\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_1.jpg | train\lettuce\Image_96.jpg | validation\lettuce\Image_1.jpg | test\lettuce\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_10.jpg | validation\lettuce\Image_10.jpg | test\lettuce\Image_10.jpg
+duplicate_ahash,3,"test,train",lettuce,True,False,train\lettuce\Image_100.jpeg | train\lettuce\Image_5.jpeg | test\lettuce\Image_5.jpeg
+duplicate_ahash,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_2.jpg | train\lettuce\Image_97.jpg | validation\lettuce\Image_2.jpg | test\lettuce\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_3.jpg | train\lettuce\Image_98.jpg | validation\lettuce\Image_3.jpg | test\lettuce\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",lettuce,True,False,train\lettuce\Image_4.jpg | train\lettuce\Image_99.jpg | validation\lettuce\Image_4.jpg | test\lettuce\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_6.jpg | validation\lettuce\Image_6.jpg | test\lettuce\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_7.jpg | validation\lettuce\Image_7.jpg | test\lettuce\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_8.jpg | validation\lettuce\Image_9.jpg | test\lettuce\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",lettuce,True,False,train\lettuce\Image_9.jpg | validation\lettuce\Image_8.jpg | test\lettuce\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_1.jpg | train\mango\Image_91.jpg | validation\mango\Image_1.jpg | test\mango\Image_1.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_10.jpg | train\mango\Image_100.jpg | validation\mango\Image_8.jpg | test\mango\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_2.jpg | train\mango\Image_92.jpg | validation\mango\Image_2.jpg | test\mango\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_3.jpg | train\mango\Image_93.jpg | validation\mango\Image_4.jpg | test\mango\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_4.jpg | train\mango\Image_94.jpg | validation\mango\Image_3.jpg | test\mango\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_5.jpg | train\mango\Image_95.jpg | validation\mango\Image_6.jpg | test\mango\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_6.jpg | train\mango\Image_96.jpg | validation\mango\Image_5.jpg | test\mango\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_7.jpg | train\mango\Image_97.jpg | validation\mango\Image_10.jpg | test\mango\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_8.jpg | train\mango\Image_98.jpg | validation\mango\Image_7.jpg | test\mango\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",mango,True,False,train\mango\Image_9.jpg | train\mango\Image_99.jpg | validation\mango\Image_9.jpg | test\mango\Image_9.jpg
+duplicate_ahash,6,"test,train,validation",onion,True,False,train\onion\Image_1.jpg | train\onion\Image_87.jpg | validation\onion\Image_1.jpg | validation\onion\Image_10.jpg | test\onion\Image_1.jpg | test\onion\Image_10.jpg
+duplicate_ahash,2,train,onion,False,False,train\onion\Image_10.jpg | train\onion\Image_95.jpg
+duplicate_ahash,2,train,onion,False,False,train\onion\Image_100.jpg | train\onion\Image_15.jpg
+duplicate_ahash,2,train,onion,False,False,train\onion\Image_11.jpg | train\onion\Image_96.jpg
+duplicate_ahash,2,train,onion,False,False,train\onion\Image_12.jpg | train\onion\Image_97.jpg
+duplicate_ahash,2,train,onion,False,False,train\onion\Image_13.jpg | train\onion\Image_98.jpg
+duplicate_ahash,2,train,onion,False,False,train\onion\Image_14.jpg | train\onion\Image_99.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_2.jpg | train\onion\Image_88.jpg | validation\onion\Image_2.jpg | test\onion\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_3.jpg | train\onion\Image_89.jpg | validation\onion\Image_3.jpg | test\onion\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",onion,True,False,train\onion\Image_4.jpg | validation\onion\Image_4.jpg | test\onion\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_5.jpg | train\onion\Image_90.jpg | validation\onion\Image_5.jpg | test\onion\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_6.jpg | train\onion\Image_91.jpg | validation\onion\Image_8.jpg | test\onion\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_7.jpg | train\onion\Image_92.jpg | validation\onion\Image_9.jpg | test\onion\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_8.jpg | train\onion\Image_93.jpg | validation\onion\Image_6.jpg | test\onion\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",onion,True,False,train\onion\Image_9.png | train\onion\Image_94.png | validation\onion\Image_7.png | test\onion\Image_7.png
+duplicate_ahash,6,"test,train,validation",orange,True,False,train\orange\Image_1.png | train\orange\Image_97.png | validation\orange\Image_1.png | validation\orange\Image_10.png | test\orange\Image_1.png | test\orange\Image_10.png
+duplicate_ahash,4,"test,train,validation",orange,True,False,train\orange\Image_100.jpg | train\orange\Image_4.jpg | validation\orange\Image_4.jpg | test\orange\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",orange,True,False,train\orange\Image_2.jpg | train\orange\Image_98.jpg | validation\orange\Image_2.jpg | test\orange\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",orange,True,False,train\orange\Image_3.jpg | train\orange\Image_99.jpg | validation\orange\Image_3.jpg | test\orange\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",orange,True,False,train\orange\Image_5.jpg | validation\orange\Image_5.jpg | test\orange\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",orange,True,False,train\orange\Image_6.jpg | validation\orange\Image_6.jpg | test\orange\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",orange,True,False,train\orange\Image_7.jpg | validation\orange\Image_7.jpg | test\orange\Image_7.jpg
+duplicate_ahash,2,"test,train",orange,True,False,train\orange\Image_8.jpeg | test\orange\Image_8.jpeg
+duplicate_ahash,3,"test,train,validation",orange,True,False,train\orange\Image_9.jpg | validation\orange\Image_9.jpg | test\orange\Image_9.jpg
+duplicate_ahash,6,"test,train,validation",paprika,True,False,train\paprika\Image_1.jpg | train\paprika\Image_94.jpg | validation\paprika\Image_1.jpg | validation\paprika\Image_10.jpg | test\paprika\Image_1.jpg | test\paprika\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",paprika,True,False,train\paprika\Image_100.jpg | train\paprika\Image_7.jpg | validation\paprika\Image_7.jpg | test\paprika\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",paprika,True,False,train\paprika\Image_2.jpg | train\paprika\Image_95.jpg | validation\paprika\Image_2.jpg | test\paprika\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",paprika,True,False,train\paprika\Image_3.jpg | train\paprika\Image_96.jpg | validation\paprika\Image_4.jpg | test\paprika\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",paprika,True,False,train\paprika\Image_4.jpg | train\paprika\Image_97.jpg | validation\paprika\Image_3.jpg | test\paprika\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",paprika,True,False,train\paprika\Image_5.jpg | train\paprika\Image_98.jpg | validation\paprika\Image_5.jpg | test\paprika\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",paprika,True,False,train\paprika\Image_6.jpg | train\paprika\Image_99.jpg | validation\paprika\Image_6.jpg | test\paprika\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",paprika,True,False,train\paprika\Image_8.jpg | validation\paprika\Image_8.jpg | test\paprika\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",paprika,True,False,train\paprika\Image_9.jpg | validation\paprika\Image_9.jpg | test\paprika\Image_9.jpg
+duplicate_ahash,6,"test,train,validation",pear,True,False,train\pear\Image_1.jpg | train\pear\Image_93.jpg | validation\pear\Image_2.jpg | validation\pear\Image_8.jpg | test\pear\Image_2.jpg | test\pear\Image_8.jpg
+duplicate_ahash,2,train,pear,False,False,train\pear\Image_100.jpg | train\pear\Image_9.jpg
+duplicate_ahash,6,"test,train,validation",pear,True,False,train\pear\Image_2.jpg | train\pear\Image_95.jpg | validation\pear\Image_10.jpg | validation\pear\Image_3.jpg | test\pear\Image_10.jpg | test\pear\Image_3.jpg
+duplicate_ahash,6,"test,train,validation",pear,True,False,train\pear\Image_3.jpg | train\pear\Image_94.jpg | validation\pear\Image_1.jpg | validation\pear\Image_9.jpg | test\pear\Image_1.jpg | test\pear\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",pear,True,False,train\pear\Image_4.jpg | train\pear\Image_96.jpg | validation\pear\Image_4.jpg | test\pear\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",pear,True,False,train\pear\Image_5.jpg | train\pear\Image_97.jpg | validation\pear\Image_5.jpg | test\pear\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",pear,True,False,train\pear\Image_6.jpg | train\pear\Image_98.jpg | validation\pear\Image_6.jpg | test\pear\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",pear,True,False,train\pear\Image_7.jpg | train\pear\Image_99.jpg | validation\pear\Image_7.jpg | test\pear\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_1.jpg | train\peas\Image_93.jpg | validation\peas\Image_1.jpg | test\peas\Image_1.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_100.jpg | train\peas\Image_8.jpg | validation\peas\Image_8.jpg | test\peas\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",peas,True,False,train\peas\Image_11.jpg | validation\peas\Image_10.jpg | test\peas\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_2.jpg | train\peas\Image_94.jpg | validation\peas\Image_2.jpg | test\peas\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_3.jpg | train\peas\Image_95.jpg | validation\peas\Image_3.jpg | test\peas\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_4.jpg | train\peas\Image_96.jpg | validation\peas\Image_4.jpg | test\peas\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_5.png | train\peas\Image_97.png | validation\peas\Image_6.png | test\peas\Image_6.png
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_6.jpg | train\peas\Image_98.jpg | validation\peas\Image_5.jpg | test\peas\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",peas,True,False,train\peas\Image_7.jpg | train\peas\Image_99.jpg | validation\peas\Image_9.jpg | test\peas\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",peas,True,False,train\peas\Image_9.jpg | validation\peas\Image_7.jpg | test\peas\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_1.jpg | train\pineapple\Image_95.jpg | validation\pineapple\Image_1.jpg | test\pineapple\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_10.jpg | validation\pineapple\Image_10.jpg | test\pineapple\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_100.jpg | train\pineapple\Image_6.jpg | validation\pineapple\Image_4.jpg | test\pineapple\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_2.jpg | train\pineapple\Image_96.jpg | validation\pineapple\Image_3.jpg | test\pineapple\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_3.jpg | train\pineapple\Image_97.jpg | validation\pineapple\Image_6.jpg | test\pineapple\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_4.jpg | train\pineapple\Image_98.jpg | validation\pineapple\Image_8.jpg | test\pineapple\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",pineapple,True,False,train\pineapple\Image_5.jpg | train\pineapple\Image_99.jpg | validation\pineapple\Image_9.jpg | test\pineapple\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_7.jpg | validation\pineapple\Image_2.jpg | test\pineapple\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_8.jpg | validation\pineapple\Image_5.jpg | test\pineapple\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",pineapple,True,False,train\pineapple\Image_9.jpg | validation\pineapple\Image_7.jpg | test\pineapple\Image_7.jpg
+duplicate_ahash,6,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_1.jpg | train\pomegranate\Image_96.jpg | validation\pomegranate\Image_1.jpg | validation\pomegranate\Image_10.jpg | test\pomegranate\Image_1.jpg | test\pomegranate\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_100.jpg | train\pomegranate\Image_5.jpg | validation\pomegranate\Image_5.jpg | test\pomegranate\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_2.jpg | train\pomegranate\Image_97.jpg | validation\pomegranate\Image_2.jpg | test\pomegranate\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_3.jpg | validation\pomegranate\Image_4.jpg | test\pomegranate\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_4.jpg | train\pomegranate\Image_99.jpg | validation\pomegranate\Image_3.jpg | test\pomegranate\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_6.jpg | validation\pomegranate\Image_6.jpg | test\pomegranate\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_7.jpg | validation\pomegranate\Image_7.jpg | test\pomegranate\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_8.jpg | validation\pomegranate\Image_9.jpg | test\pomegranate\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",pomegranate,True,False,train\pomegranate\Image_9.jpg | validation\pomegranate\Image_8.jpg | test\pomegranate\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",potato,True,False,train\potato\Image_1.jpg | train\potato\Image_95.jpg | validation\potato\Image_1.jpg | test\potato\Image_1.jpg
+duplicate_ahash,4,"test,train,validation",potato,True,False,train\potato\Image_100.jpg | train\potato\Image_6.jpg | validation\potato\Image_6.jpg | test\potato\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",potato,True,False,train\potato\Image_12.jpg | validation\potato\Image_9.jpg | test\potato\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",potato,True,False,train\potato\Image_13.jpg | validation\potato\Image_10.jpg | test\potato\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",potato,True,False,train\potato\Image_3.jpg | train\potato\Image_97.jpg | validation\potato\Image_3.jpg | test\potato\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",potato,True,False,train\potato\Image_4.jpg | train\potato\Image_98.jpg | validation\potato\Image_4.jpg | test\potato\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",potato,True,False,train\potato\Image_5.JPG | train\potato\Image_99.JPG | validation\potato\Image_5.JPG | test\potato\Image_5.JPG
+duplicate_ahash,3,"test,train,validation",potato,True,False,train\potato\Image_7.jpg | validation\potato\Image_7.jpg | test\potato\Image_7.jpg
+duplicate_ahash,5,"test,train,validation","potato,sweetpotato",True,True,train\potato\Image_8.jpg | train\sweetpotato\Image_100.jpg | train\sweetpotato\Image_4.jpg | validation\sweetpotato\Image_3.jpg | test\sweetpotato\Image_3.jpg
+duplicate_ahash,6,"test,train,validation",raddish,True,False,train\raddish\Image_1.jpg | train\raddish\Image_97.jpg | validation\raddish\Image_1.jpg | validation\raddish\Image_10.jpg | test\raddish\Image_1.jpg | test\raddish\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",raddish,True,False,train\raddish\Image_100.jpg | train\raddish\Image_4.jpg | validation\raddish\Image_3.jpg | test\raddish\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",raddish,True,False,train\raddish\Image_2.jpg | train\raddish\Image_98.jpg | validation\raddish\Image_2.jpg | test\raddish\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",raddish,True,False,train\raddish\Image_3.jpg | train\raddish\Image_99.jpg | validation\raddish\Image_4.jpg | test\raddish\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",raddish,True,False,train\raddish\Image_5.jpg | validation\raddish\Image_6.jpg | test\raddish\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",raddish,True,False,train\raddish\Image_6.jpg | validation\raddish\Image_7.jpg | test\raddish\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",raddish,True,False,train\raddish\Image_7.jpg | validation\raddish\Image_8.jpg | test\raddish\Image_8.jpg
+duplicate_ahash,2,"test,train",raddish,True,False,train\raddish\Image_8.jpeg | test\raddish\Image_9.jpeg
+duplicate_ahash,3,"test,train,validation",raddish,True,False,train\raddish\Image_9.png | validation\raddish\Image_5.png | test\raddish\Image_5.png
+duplicate_ahash,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_1.jpg | train\soy beans\Image_97.jpg | validation\soy beans\Image_1.jpg | test\soy beans\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_10.jpg | validation\soy beans\Image_9.jpg | test\soy beans\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_100.jpg | train\soy beans\Image_4.jpg | validation\soy beans\Image_4.jpg | test\soy beans\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_2.jpg | train\soy beans\Image_98.jpg | validation\soy beans\Image_2.jpg | test\soy beans\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",soy beans,True,False,train\soy beans\Image_3.jpg | train\soy beans\Image_99.jpg | validation\soy beans\Image_3.jpg | test\soy beans\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_5.jpg | validation\soy beans\Image_5.jpg | test\soy beans\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_6.jpg | validation\soy beans\Image_6.jpg | test\soy beans\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_7.jpg | validation\soy beans\Image_7.jpg | test\soy beans\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_8.jpg | validation\soy beans\Image_10.jpg | test\soy beans\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",soy beans,True,False,train\soy beans\Image_9.jpg | validation\soy beans\Image_8.jpg | test\soy beans\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_1.jpg | train\spinach\Image_94.jpg | validation\spinach\Image_1.jpg | test\spinach\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",spinach,True,False,train\spinach\Image_10.jpg | validation\spinach\Image_10.jpg | test\spinach\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_100.jpg | train\spinach\Image_7.jpg | validation\spinach\Image_7.jpg | test\spinach\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_2.jpg | train\spinach\Image_95.jpg | validation\spinach\Image_2.jpg | test\spinach\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_3.jpg | train\spinach\Image_96.jpg | validation\spinach\Image_3.jpg | test\spinach\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_4.jpg | train\spinach\Image_97.jpg | validation\spinach\Image_5.jpg | test\spinach\Image_5.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_5.jpg | train\spinach\Image_98.jpg | validation\spinach\Image_4.jpg | test\spinach\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",spinach,True,False,train\spinach\Image_6.jpg | train\spinach\Image_99.jpg | validation\spinach\Image_6.jpg | test\spinach\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",spinach,True,False,train\spinach\Image_8.jpg | validation\spinach\Image_8.jpg | test\spinach\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",spinach,True,False,train\spinach\Image_9.jpg | validation\spinach\Image_9.jpg | test\spinach\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_1.jpg | train\sweetcorn\Image_93.jpg | validation\sweetcorn\Image_1.jpg | test\sweetcorn\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_10.jpg | validation\sweetcorn\Image_10.jpg | test\sweetcorn\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_100.jpg | train\sweetcorn\Image_8.jpg | validation\sweetcorn\Image_7.jpg | test\sweetcorn\Image_7.jpg
+duplicate_ahash,5,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_2.jpg | train\sweetcorn\Image_62.jpg | train\sweetcorn\Image_94.jpg | validation\sweetcorn\Image_2.jpg | test\sweetcorn\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_3.jpg | train\sweetcorn\Image_95.jpg | validation\sweetcorn\Image_3.jpg | test\sweetcorn\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_4.jpg | train\sweetcorn\Image_96.jpg | validation\sweetcorn\Image_4.jpg | test\sweetcorn\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_5.jpg | train\sweetcorn\Image_97.jpg | validation\sweetcorn\Image_8.jpg | test\sweetcorn\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",sweetcorn,True,False,train\sweetcorn\Image_6.jpg | train\sweetcorn\Image_98.jpg | validation\sweetcorn\Image_6.jpg | test\sweetcorn\Image_6.jpg
+duplicate_ahash,6,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_2.jpg | train\sweetpotato\Image_98.jpg | validation\sweetpotato\Image_1.jpg | validation\sweetpotato\Image_9.jpg | test\sweetpotato\Image_1.jpg | test\sweetpotato\Image_9.jpg
+duplicate_ahash,6,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_3.jpg | train\sweetpotato\Image_99.jpg | validation\sweetpotato\Image_10.jpg | validation\sweetpotato\Image_2.jpg | test\sweetpotato\Image_10.jpg | test\sweetpotato\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_5.jpg | validation\sweetpotato\Image_6.jpg | test\sweetpotato\Image_6.jpg
+duplicate_ahash,5,"test,train,validation",sweetpotato,True,False,train\sweetpotato\Image_97.jpg | validation\sweetpotato\Image_4.jpg | validation\sweetpotato\Image_8.jpg | test\sweetpotato\Image_4.jpg | test\sweetpotato\Image_8.jpg
+duplicate_ahash,6,"test,train,validation",tomato,True,False,train\tomato\Image_1.jpg | train\tomato\Image_99.jpg | validation\tomato\Image_1.jpg | validation\tomato\Image_10.jpg | test\tomato\Image_1.jpg | test\tomato\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_10.jpg | validation\tomato\Image_7.jpg | test\tomato\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",tomato,True,False,train\tomato\Image_100.jpg | train\tomato\Image_2.jpg | validation\tomato\Image_2.jpg | test\tomato\Image_2.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_3.jpg | validation\tomato\Image_3.jpg | test\tomato\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_4.jpg | validation\tomato\Image_6.jpg | test\tomato\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_5.jpg | validation\tomato\Image_5.jpg | test\tomato\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_6.jpg | validation\tomato\Image_4.jpg | test\tomato\Image_4.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_7.jpg | validation\tomato\Image_9.jpg | test\tomato\Image_9.jpg
+duplicate_ahash,3,"test,train,validation",tomato,True,False,train\tomato\Image_9.jpg | validation\tomato\Image_8.jpg | test\tomato\Image_8.jpg
+duplicate_ahash,6,"test,train,validation",turnip,True,False,train\turnip\Image_1.jpg | train\turnip\Image_94.jpg | validation\turnip\Image_1.jpg | validation\turnip\Image_10.jpg | test\turnip\Image_1.jpg | test\turnip\Image_10.jpg
+duplicate_ahash,3,"test,train,validation",turnip,True,False,train\turnip\Image_10.jpg | validation\turnip\Image_9.jpg | test\turnip\Image_9.jpg
+duplicate_ahash,4,"test,train,validation",turnip,True,False,train\turnip\Image_100.jpg | train\turnip\Image_7.jpg | validation\turnip\Image_7.jpg | test\turnip\Image_7.jpg
+duplicate_ahash,4,"test,train,validation",turnip,True,False,train\turnip\Image_2.jpg | train\turnip\Image_95.jpg | validation\turnip\Image_2.jpg | test\turnip\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",turnip,True,False,train\turnip\Image_3.jpg | train\turnip\Image_96.jpg | validation\turnip\Image_3.jpg | test\turnip\Image_3.jpg
+duplicate_ahash,4,"test,train,validation",turnip,True,False,train\turnip\Image_4.jpg | train\turnip\Image_97.jpg | validation\turnip\Image_4.jpg | test\turnip\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",turnip,True,False,train\turnip\Image_5.jpg | train\turnip\Image_98.jpg | validation\turnip\Image_6.jpg | test\turnip\Image_6.jpg
+duplicate_ahash,4,"test,train,validation",turnip,True,False,train\turnip\Image_6.jpg | train\turnip\Image_99.jpg | validation\turnip\Image_5.jpg | test\turnip\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",turnip,True,False,train\turnip\Image_9.jpg | validation\turnip\Image_8.jpg | test\turnip\Image_8.jpg
+duplicate_ahash,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_1.jpg | train\watermelon\Image_97.jpg | validation\watermelon\Image_1.jpg | test\watermelon\Image_1.jpg
+duplicate_ahash,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_10.jpg | validation\watermelon\Image_10.jpg | test\watermelon\Image_10.jpg
+duplicate_ahash,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_100.jpg | train\watermelon\Image_4.jpg | validation\watermelon\Image_4.jpg | test\watermelon\Image_4.jpg
+duplicate_ahash,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_2.jpg | train\watermelon\Image_98.jpg | validation\watermelon\Image_2.jpg | test\watermelon\Image_2.jpg
+duplicate_ahash,4,"test,train,validation",watermelon,True,False,train\watermelon\Image_3.jpg | train\watermelon\Image_99.jpg | validation\watermelon\Image_3.jpg | test\watermelon\Image_3.jpg
+duplicate_ahash,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_5.jpg | validation\watermelon\Image_5.jpg | test\watermelon\Image_5.jpg
+duplicate_ahash,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_6.jpg | validation\watermelon\Image_6.jpg | test\watermelon\Image_6.jpg
+duplicate_ahash,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_7.jpg | validation\watermelon\Image_7.jpg | test\watermelon\Image_7.jpg
+duplicate_ahash,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_8.jpg | validation\watermelon\Image_8.jpg | test\watermelon\Image_8.jpg
+duplicate_ahash,3,"test,train,validation",watermelon,True,False,train\watermelon\Image_9.jpg | validation\watermelon\Image_9.jpg | test\watermelon\Image_9.jpg
+duplicate_ahash,2,"test,validation",apple,True,False,validation\apple\Image_4.jpg | test\apple\Image_4.jpg
+duplicate_ahash,2,"test,validation",apple,True,False,validation\apple\Image_5.jpg | test\apple\Image_5.jpg
+duplicate_ahash,2,"test,validation",apple,True,False,validation\apple\Image_9.jpg | test\apple\Image_9.jpg
+duplicate_ahash,2,"test,validation",banana,True,False,validation\banana\Image_2.jpg | test\banana\Image_2.jpg
+duplicate_ahash,2,"test,validation",banana,True,False,validation\banana\Image_9.jpg | test\banana\Image_9.jpg
+duplicate_ahash,2,"test,validation",carrot,True,False,validation\carrot\Image_4.png | test\carrot\Image_4.png
+duplicate_ahash,2,"test,validation",chilli pepper,True,False,validation\chilli pepper\Image_2.png | test\chilli pepper\Image_2.png
+duplicate_ahash,2,"test,validation",potato,True,False,validation\potato\Image_2.jpg | test\potato\Image_2.jpg
+duplicate_ahash,2,"test,validation",potato,True,False,validation\potato\Image_8.jpg | test\potato\Image_8.jpg
+duplicate_ahash,2,"test,validation",sweetpotato,True,False,validation\sweetpotato\Image_5.jpg | test\sweetpotato\Image_5.jpg
+duplicate_ahash,2,"test,validation",sweetpotato,True,False,validation\sweetpotato\Image_7.jpg | test\sweetpotato\Image_7.jpg
+random_noise,1,train,apple,False,False,train\apple\image_000.jpg
+random_noise,1,train,apple,False,False,train\apple\image_001.jpg
+random_noise,1,train,apple,False,False,train\apple\image_002.jpg
+random_noise,1,train,apple,False,False,train\apple\image_003.jpg
+random_noise,1,train,apple,False,False,train\apple\image_004.jpg
+random_noise,1,train,apple,False,False,train\apple\image_005.jpg
+random_noise,1,train,apple,False,False,train\apple\image_006.jpg
+random_noise,1,train,apple,False,False,train\apple\image_007.jpg
+random_noise,1,train,apple,False,False,train\apple\image_008.jpg
+random_noise,1,train,apple,False,False,train\apple\image_009.jpg
+random_noise,1,train,banana,False,False,train\banana\image_000.jpg
+random_noise,1,train,banana,False,False,train\banana\image_001.jpg
+random_noise,1,train,banana,False,False,train\banana\image_002.jpg
+random_noise,1,train,banana,False,False,train\banana\image_003.jpg
+random_noise,1,train,banana,False,False,train\banana\image_004.jpg
+random_noise,1,train,banana,False,False,train\banana\image_005.jpg
+random_noise,1,train,banana,False,False,train\banana\image_006.jpg
+random_noise,1,train,banana,False,False,train\banana\image_007.jpg
+random_noise,1,train,banana,False,False,train\banana\image_008.jpg
+random_noise,1,train,banana,False,False,train\banana\image_009.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_000.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_001.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_002.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_003.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_004.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_005.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_006.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_007.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_008.jpg
+random_noise,1,train,carrot,False,False,train\carrot\image_009.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_000.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_001.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_002.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_003.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_004.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_005.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_006.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_007.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_008.jpg
+random_noise,1,train,cucumber,False,False,train\cucumber\image_009.jpg
+random_noise,1,train,soy beans,False,False,train\soy beans\Image_29.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_000.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_001.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_002.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_003.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_004.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_005.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_006.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_007.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_008.jpg
+random_noise,1,train,tomato,False,False,train\tomato\image_009.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_000.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_001.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_002.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_003.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_004.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_005.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_006.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_007.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_008.jpg
+random_noise,1,validation,apple,False,False,validation\apple\image_009.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_000.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_001.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_002.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_003.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_004.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_005.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_006.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_007.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_008.jpg
+random_noise,1,validation,banana,False,False,validation\banana\image_009.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_000.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_001.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_002.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_003.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_004.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_005.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_006.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_007.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_008.jpg
+random_noise,1,validation,carrot,False,False,validation\carrot\image_009.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_000.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_001.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_002.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_003.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_004.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_005.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_006.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_007.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_008.jpg
+random_noise,1,validation,cucumber,False,False,validation\cucumber\image_009.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_000.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_001.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_002.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_003.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_004.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_005.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_006.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_007.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_008.jpg
+random_noise,1,validation,tomato,False,False,validation\tomato\image_009.jpg
+random_noise,1,test,apple,False,False,test\apple\image_000.jpg
+random_noise,1,test,apple,False,False,test\apple\image_001.jpg
+random_noise,1,test,apple,False,False,test\apple\image_002.jpg
+random_noise,1,test,apple,False,False,test\apple\image_003.jpg
+random_noise,1,test,apple,False,False,test\apple\image_004.jpg
+random_noise,1,test,apple,False,False,test\apple\image_005.jpg
+random_noise,1,test,apple,False,False,test\apple\image_006.jpg
+random_noise,1,test,apple,False,False,test\apple\image_007.jpg
+random_noise,1,test,apple,False,False,test\apple\image_008.jpg
+random_noise,1,test,apple,False,False,test\apple\image_009.jpg
+random_noise,1,test,banana,False,False,test\banana\image_000.jpg
+random_noise,1,test,banana,False,False,test\banana\image_001.jpg
+random_noise,1,test,banana,False,False,test\banana\image_002.jpg
+random_noise,1,test,banana,False,False,test\banana\image_003.jpg
+random_noise,1,test,banana,False,False,test\banana\image_004.jpg
+random_noise,1,test,banana,False,False,test\banana\image_005.jpg
+random_noise,1,test,banana,False,False,test\banana\image_006.jpg
+random_noise,1,test,banana,False,False,test\banana\image_007.jpg
+random_noise,1,test,banana,False,False,test\banana\image_008.jpg
+random_noise,1,test,banana,False,False,test\banana\image_009.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_000.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_001.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_002.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_003.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_004.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_005.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_006.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_007.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_008.jpg
+random_noise,1,test,carrot,False,False,test\carrot\image_009.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_000.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_001.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_002.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_003.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_004.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_005.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_006.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_007.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_008.jpg
+random_noise,1,test,cucumber,False,False,test\cucumber\image_009.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_000.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_001.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_002.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_003.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_004.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_005.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_006.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_007.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_008.jpg
+random_noise,1,test,tomato,False,False,test\tomato\image_009.jpg

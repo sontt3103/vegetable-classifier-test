@@ -30,15 +30,15 @@
 | Learning rate | 0.001 |
 | Loss function | categorical_crossentropy |
 | Số epoch đã chạy | 25 |
-| Thời gian training | 7178.3 giây |
+| Thời gian training | 2054.4 giây |
 | Áp dụng class_weight | Có |
 
 **Kết quả trên tập train/validation**
 
 | Metric | Train | Validation |
 |---|---:|---:|
-| Accuracy | 39.81% | 34.79% |
-| Loss | 2.0044 | 2.1587 |
+| Accuracy | 38.47% | 33.87% |
+| Loss | 2.0319 | 2.2404 |
 
 ![Training curves](figures/baseline_cnn_training_curves.png)
 
@@ -91,15 +91,15 @@
 | Learning rate | 0.001 |
 | Loss function | categorical_crossentropy |
 | Số epoch đã chạy | 25 |
-| Thời gian training | 3328.7 giây |
+| Thời gian training | 1247.6 giây |
 | Áp dụng class_weight | Có |
 
 **Kết quả trên tập train/validation**
 
 | Metric | Train | Validation |
 |---|---:|---:|
-| Accuracy | 93.51% | 82.26% |
-| Loss | 0.1904 | 0.6791 |
+| Accuracy | 93.26% | 79.26% |
+| Loss | 0.2071 | 0.7938 |
 
 ![Training curves](figures/mobilenetv2_transfer_training_curves.png)
 
@@ -144,22 +144,22 @@
 
 | Thông số | Giá trị |
 |---|---|
-| Architecture | HOG(9 hướng, cell [8, 8]) -> PCA(50) + Color Hist RGB(32 bins, Hellinger x10) -> SVC RBF |
-| Số parameters | 292,730 |
+| Architecture | Đặc trưng MobileNetV2 (ImageNet) -> PCA(256) -> L2 theo khối -> SVC RBF (lật ngang ảnh train) |
+| Số parameters | 871,936 |
 | Input size | 128×128 |
 | Batch size | — |
 | Optimizer | GridSearchCV (scoring = f1_macro) |
 | Learning rate | — |
 | Loss function | hinge (SVM) |
 | Số epoch đã chạy | — |
-| Thời gian training | 82.4 giây |
+| Thời gian training | 58.6 giây |
 | Áp dụng class_weight | Không |
 
 **Kết quả trên tập train/validation**
 
 | Metric | Train | Validation |
 |---|---:|---:|
-| Accuracy | 97.92% | 31.57% |
+| Accuracy | 98.56% | 84.10% |
 | Loss | — | — |
 
 ![GridSearchCV](figures/classical_svm_gridsearch.png)
@@ -168,30 +168,30 @@
 
 | Metric | Giá trị |
 |---|---:|
-| Accuracy | 34.10% |
-| Precision (macro) | 0.3603 |
-| Recall (macro) | 0.3382 |
-| F1-score (macro) | 0.3372 |
-| F1-score (weighted) | 0.3383 |
+| Accuracy | 81.11% |
+| Precision (macro) | 0.8175 |
+| Recall (macro) | 0.8054 |
+| F1-score (macro) | 0.8043 |
+| F1-score (weighted) | 0.8082 |
 | Số ảnh test | 434 |
-| Số ảnh dự đoán sai | 286 |
+| Số ảnh dự đoán sai | 82 |
 
-- **Class có kết quả tốt nhất:** carrot
+- **Class có kết quả tốt nhất:** watermelon
 - **Class yếu nhất:** capsicum
 
 **Phân tích overfitting/underfitting:** ⚠️ Overfitting
 
-> Train accuracy (97.92%) cao hơn val accuracy (31.57%) khoảng 66.35%, vượt ngưỡng 10% -> mô hình có dấu hiệu overfitting.
+> Train accuracy (98.56%) cao hơn val accuracy (84.10%) khoảng 14.46%, vượt ngưỡng 10% -> mô hình có dấu hiệu overfitting.
 
 **Các cặp class bị nhầm lẫn nhiều nhất**
 
 | Nhãn thật | Model dự đoán thành | Số lần |
 |---|---|---:|
-| apple | raddish | 4 |
-| beetroot | turnip | 4 |
-| soy beans | potato | 4 |
-| capsicum | bell pepper | 3 |
-| capsicum | spinach | 3 |
+| capsicum | bell pepper | 6 |
+| corn | sweetcorn | 6 |
+| apple | tomato | 3 |
+| bell pepper | capsicum | 3 |
+| capsicum | tomato | 3 |
 
 ![Confusion matrix](figures/classical_svm_confusion_matrix.png)
 
@@ -203,16 +203,16 @@
 
 | Model | Test Accuracy | Precision (macro) | Recall (macro) | F1-score (macro) | F1-score (weighted) | Training Time (s) | Num Parameters | Test Samples | Misclassified | Inference (ms/img) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| classical_svm | 0.3410 | 0.3603 | 0.3382 | 0.3372 | 0.3383 | 82.4000 | 292730 | 434 | 286 | 5.6000 |
-| baseline_cnn | 0.4055 | 0.4276 | 0.4005 | 0.3845 | 0.3895 | 7178.3000 | 136420 | 434 | 200 | nan |
-| mobilenetv2_transfer | 0.8088 | 0.8165 | 0.8022 | 0.8019 | 0.8067 | 3328.7000 | 2595172 | 434 | 83 | nan |
+| classical_svm | 0.8111 | 0.8175 | 0.8054 | 0.8043 | 0.8082 | 58.6000 | 871936 | 434 | 82 | 18.6100 |
+| baseline_cnn | 0.4055 | 0.4276 | 0.4005 | 0.3845 | 0.3895 | 2054.4000 | 136420 | 434 | 200 | nan |
+| mobilenetv2_transfer | 0.8088 | 0.8165 | 0.8022 | 0.8019 | 0.8067 | 1247.6000 | 2595172 | 434 | 83 | nan |
 
 
 **Quan sát tự động từ số liệu:**
 
-- Accuracy cao nhất: **mobilenetv2_transfer** (80.88%)
-- F1-score (macro) cao nhất: **mobilenetv2_transfer** (0.8019)
-- Train nhanh nhất: **classical_svm** (82 giây)
+- Accuracy cao nhất: **classical_svm** (81.11%)
+- F1-score (macro) cao nhất: **classical_svm** (0.8043)
+- Train nhanh nhất: **classical_svm** (59 giây)
 
 > **Lưu ý khi chọn final model:** accuracy cao nhất KHÔNG đương nhiên là model tốt nhất.
 > Nếu dataset mất cân bằng, F1-score (macro) phản ánh chất lượng công bằng hơn giữa các class.

@@ -136,13 +136,21 @@ CONFIG = {
         #   'scale' → gamma = 1 / (n_features * X.var())  ← thường tốt hơn
         #   'auto'  → gamma = 1 / n_features
         "gamma_list": ["scale", "auto"],
-        # Số chiều PCA: giảm từ 8196 (HOG + màu) xuống 200
-        # Giữ lại ~95% phương sai, giúp SVM train nhanh hơn đáng kể
+        # Số chiều PCA cho backend cũ (tn1): giảm từ 8196 (HOG + màu) xuống 200.
+        # Đo thực tế trên mẫu EDA: 200 thành phần chỉ giữ ~71% phương sai (cần 689 để giữ 95%).
         "pca_n_components": 200,
         # Số fold cross-validation trong GridSearchCV (5 là tiêu chuẩn)
         "cv_folds": 5,
         # Kích thước ảnh đầu vào (phải khớp với hog_features.py)
         "img_size": (128, 128),
+        # ---- Bộ đặc trưng v2 (mặc định của train_svm.py) – chọn từ scripts/svm_experiments.py (E5) ----
+        # HOG cell 16 -> PCA + histogram HSV + HSV theo vùng + LBP, có lật ngang ảnh train.
+        "v2_blocks": ["hog16", "hsv", "hsv_grid", "lbp"],
+        "v2_hog_pca": 50,
+        "v2_c_list": [1, 3, 10, 30],
+        "v2_flip_augment": True,
+        # Số chiều PCA thử cho khối "cnn" (đặc trưng MobileNetV2 1.280 chiều) – hướng B
+        "v2_cnn_pca": [128, 256],
     },
 
     # -----------------------------------------------------------------
@@ -158,4 +166,4 @@ CONFIG = {
 def ensure_dirs():
     """Tạo các thư mục output nếu chưa tồn tại (idempotent, an toàn khi gọi nhiều lần)."""
     for key in ("checkpoints_dir", "reports_dir", "figures_dir", "logs_dir"):
-        os.makedirs(CONFIG["paths"][key], exist_ok=True)
+        os.makedirs(CONFIG["paths"][key], exist_ok=True)

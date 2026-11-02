@@ -1,18 +1,19 @@
 {
   "model_name": "classical_svm",
-  "architecture": "HOG(9 hướng, cell [8, 8]) -> PCA(50) + Color Hist RGB(32 bins, Hellinger x10) -> SVC RBF",
-  "backend": "sklearn",
-  "num_parameters": 292730,
+  "architecture": "Đặc trưng MobileNetV2 (ImageNet) -> PCA(256) -> L2 theo khối -> SVC RBF (lật ngang ảnh train)",
+  "backend": "v2",
+  "num_parameters": 871936,
   "num_parameters_note": "SVM không có trọng số như CNN; giá trị = số support vector x số chiều đầu vào SVM",
-  "n_support_vectors": 2005,
+  "n_support_vectors": 3406,
   "input_size": 128,
-  "n_features_before_pca": 8196,
-  "pca_components": 50,
-  "pca_explained_variance": 0.3569900691509247,
+  "n_features_before_pca": 1280,
+  "pca_components": 256,
+  "pca_explained_variance": 0.8585257530212402,
   "optimizer": "GridSearchCV (scoring = f1_macro)",
   "loss_function": "hinge (SVM)",
   "param_grid": {
     "C": [
+      1,
       3,
       10,
       30
@@ -21,31 +22,31 @@
       "scale"
     ],
     "hog_pca": [
-      50,
-      100
-    ],
-    "color_w": [
-      10,
-      20
+      50
     ]
   },
+  "feature_blocks": [
+    "cnn"
+  ],
+  "flip_augment": true,
   "cv_folds": 5,
   "best_params": {
-    "C": 10,
+    "C": 1,
     "gamma": "scale",
-    "hog_pca": 50,
-    "color_w": 10
+    "hog_pca": null,
+    "cnn_pca": 256,
+    "flip_augment": true
   },
-  "best_cv_f1_macro": 0.3278740701331275,
+  "best_cv_f1_macro": 0.808443744830258,
   "num_train_samples": 2017,
   "max_per_class": null,
-  "training_time_seconds": 82.4,
-  "gridsearch_time_seconds": 77.8,
-  "feature_extraction_time_seconds": 9.6,
-  "inference_ms_per_image": 5.6,
-  "inference_ms_per_image_classifier_only": 0.781,
-  "final_train_accuracy": 0.9791769955379276,
-  "final_val_accuracy": 0.315668202764977,
+  "training_time_seconds": 58.6,
+  "gridsearch_time_seconds": 50.5,
+  "feature_extraction_time_seconds": 67.0,
+  "inference_ms_per_image": 18.61,
+  "inference_ms_per_image_classifier_only": 0.824,
+  "final_train_accuracy": 0.9856222112047596,
+  "final_val_accuracy": 0.8410138248847926,
   "class_weight_applied": false,
   "class_names": [
     "apple",

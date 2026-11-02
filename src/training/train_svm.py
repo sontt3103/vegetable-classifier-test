@@ -22,8 +22,16 @@ Cách chạy (từ thư mục gốc project):
     # 2) Chỉ trích đặc trưng + đo thời gian (cache lại để lần sau không tính lại)
     python -m src.training.train_svm --features-only
 
-    # 3) Train đầy đủ 36 class bằng code TN 1 + TN 2 (mặc định)
+    # 3) Train đầy đủ 36 class (mặc định: bộ đặc trưng v2 – src/features/svm_features.py)
     python -m src.training.train_svm
+
+    # 4) Hướng B: SVM trên đặc trưng MobileNetV2 đã huấn luyện sẵn (cần TensorFlow)
+    python -m src.training.train_svm --blocks cnn --tag cnn
+    python -m src.training.train_svm --blocks cnn hog16 hsv hsv_grid lbp --tag cnn_v2
+
+    # 5) So sánh với các cấu hình cũ
+    python -m src.training.train_svm --backend sklearn --tag v1   # HOG8-PCA + RGB Hellinger (TN 3)
+    python -m src.training.train_svm --backend tn1 --tag tn1      # code TN 1 + TN 2 gốc
 
 Output (reports/ và checkpoints/):
     reports/classical_svm_evaluation.json      (cùng format *_evaluation.json của CNN)
@@ -140,8 +148,34 @@ def extract_features_cached(paths: list[str], split: str, cache_dir: Path, n_job
     return X, keep, seconds
 
 
+def extract_v2_cached(paths: list[str], split: str, cache_dir: Path, blocks: list[str],
+                      with_flip: bool, n_jobs: int = -1):
+    """Đặc trưng v2 (svm_features.py), có cache. Trả về (X, X_flip|None, keep_mask, seconds)."""
+    from src.features import svm_features as sf
+
+    params = sf.feature_params(blocks)
+    key = hashlib.md5((json.dumps(params) + str(with_flip) + "|".join(paths)).encode()).hexdigest()[:10]
+    cache_file = cache_dir / f"v2_{split}_{key}.npz"
+    if cache_file.exists():
+        d = np.load(cache_file)
+        print(f"  Dùng cache {cache_file.name}: X={d['X'].shape}")
+        return d["X"], (d["X_flip"] if with_flip else None), d["keep"], float(d["seconds"])
+
+    print(f"  Trích đặc trưng v2 {len(paths)} ảnh ({split}{', kèm ảnh lật' if with_flip else ''})...")
+    t0 = time.time()
+    X, X_flip, keep = sf.batch_extract(paths, blocks, with_flip=with_flip, n_jobs=n_jobs)
+    seconds = time.time() - t0
+    for p, k in zip(paths, keep):
+        if not k:
+            print(f"  [!] Bỏ qua ảnh lỗi: {p}")
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(cache_file, X=X, X_flip=X_flip if with_flip else np.zeros(0), keep=keep, seconds=seconds)
+    print(f"  Xong {split}: X={X.shape}, {seconds:.1f}s ({seconds / max(len(paths), 1) * 1000:.1f} ms/ảnh)")
+    return X, X_flip, keep, seconds
+
+
 # =====================================================================
-# 3. Train — 2 backend
+# 3. Train — 3 backend
 # =====================================================================
 def _cv_folds(y, wanted: int) -> int:
     min_count = int(np.bincount(y).min())
@@ -279,17 +313,88 @@ def train_tn1(X, y, args):
     return bundle, info["best_params"], float(info["best_cv_score"]), None, t_search, 0.0
 
 
+def train_v2(X, y, args, X_flip=None):
+    """Bộ đặc trưng v2 (mặc định) – cấu hình E5 trong scripts/svm_experiments.py:
+        HOG cell16 -> PCA -> L2 | HSV, HSV theo vùng, LBP -> Hellinger -> L2  ==> SVC RBF
+    Lật ngang ảnh train để nhân đôi dữ liệu; ảnh lật luôn nằm cùng fold với ảnh gốc
+    (StratifiedGroupKFold) để kiểm định chéo không bị rò rỉ."""
+    import warnings
+    from sklearn.model_selection import GridSearchCV, StratifiedGroupKFold
+    from src.features import svm_features as sf
+
+    blocks = args.v2_blocks
+    dims = sf.block_dims(blocks)
+    pipe = sf.build_pipeline(blocks, dims, hog_pca=args.v2_hog_pca, seed=args.seed)
+    has_hog = any(b.startswith("hog") for b in blocks)
+
+    groups = np.arange(len(y))
+    if X_flip is not None:
+        X, y, groups = np.vstack([X, X_flip]), np.concatenate([y, y]), np.concatenate([groups, groups])
+    folds = _cv_folds(y[: len(groups) // (2 if X_flip is not None else 1)], args.cv)
+    grid = {"svc__C": args.c}
+    if "cnn" in blocks:
+        grid["features__cnn__pca__n_components"] = args.v2_cnn_pca
+    n_comb = int(np.prod([len(v) for v in grid.values()]))
+    print(f"  GridSearchCV v2: khối {blocks} | lưới {grid} | "
+          f"{'có' if X_flip is not None else 'không'} lật ảnh -> {n_comb} tổ hợp x {folds} fold")
+
+    gs = GridSearchCV(pipe, grid, scoring="f1_macro", n_jobs=args.n_jobs, verbose=1,
+                      cv=StratifiedGroupKFold(folds, shuffle=True, random_state=args.seed),
+                      return_train_score=True)
+    t0 = time.time()
+    gs.fit(X, y, groups=groups)
+    t_search = time.time() - t0
+
+    best = gs.best_estimator_
+    best.set_params(svc__probability=True)   # Platt scaling -> độ tin cậy / Top-K cho Streamlit
+    t1 = time.time()
+    with warnings.catch_warnings():  # sklearn >= 1.9 báo deprecated probability=True, vẫn chạy bình thường
+        warnings.simplefilter("ignore", FutureWarning)
+        best.fit(X, y)
+    t_refit = time.time() - t1
+
+    tf_named = best.named_steps["features"].named_transformers_
+    pca_block = next(b for b in blocks if b.startswith("hog") or b == "cnn")
+    main_pca = tf_named[pca_block].named_steps["pca"]
+    cnn_pca = gs.best_params_.get("features__cnn__pca__n_components")
+    best_params = {"C": gs.best_params_["svc__C"], "gamma": "scale",
+                   "hog_pca": args.v2_hog_pca if has_hog else None,
+                   "cnn_pca": cnn_pca, "flip_augment": X_flip is not None}
+    bundle = {
+        "backend": "v2",
+        "pipeline": best,
+        "blocks": blocks,
+        "dims": dims,
+        "best_params": best_params,
+        "explained_variance": float(main_pca.explained_variance_ratio_.sum()),
+        "pca_block": pca_block,
+        "n_support_vectors": _n_support(best.named_steps["svc"]),
+        "n_model_dims": sf.model_dims(blocks, dims, args.v2_hog_pca, cnn_pca or 0),
+    }
+    cr = gs.cv_results_
+    cv_results = pd.DataFrame({
+        "C": cr["param_svc__C"], "gamma": "scale",
+        "mean_test_score": cr["mean_test_score"], "std_test_score": cr["std_test_score"],
+        "mean_train_score": cr["mean_train_score"], "mean_fit_time": cr["mean_fit_time"],
+        "rank_test_score": cr["rank_test_score"],
+    })
+    if "cnn" in blocks:
+        cv_results["cnn_pca"] = [int(v) for v in cr["param_features__cnn__pca__n_components"]]
+    cv_results = cv_results.sort_values("rank_test_score")
+    return bundle, best_params, float(gs.best_score_), cv_results, t_search, t_refit
+
+
 # =====================================================================
 # 4. Dự đoán từ bundle (dùng chung cho đánh giá + Streamlit của TN 4)
 # =====================================================================
 def bundle_predict(bundle, X):
-    if bundle["backend"] == "sklearn":
+    if bundle["backend"] in ("sklearn", "v2"):
         return bundle["pipeline"].predict(X)
     return bundle["svm"].predict(bundle["pca"].transform(X))
 
 
 def bundle_predict_proba(bundle, X):
-    if bundle["backend"] == "sklearn":
+    if bundle["backend"] in ("sklearn", "v2"):
         return bundle["pipeline"].predict_proba(X)
     return bundle["svm"].predict_proba(bundle["pca"].transform(X))
 
@@ -304,8 +409,13 @@ def predict_image(bundle, image_path: str, top_k: int = 3) -> list[dict]:
         bundle = load_svm_bundle()
         predict_image(bundle, "anh.jpg")  ->  [{"class": "carrot", "confidence": 0.91}, ...]
     """
-    from src.features.hog_features import extract_combined_features
-    x = extract_combined_features(image_path).reshape(1, -1)
+    if bundle["backend"] == "v2":
+        from src.features.hog_features import _read_image_rgb
+        from src.features.svm_features import extract_vector_from_image
+        x = extract_vector_from_image(_read_image_rgb(image_path), bundle["blocks"]).reshape(1, -1)
+    else:
+        from src.features.hog_features import extract_combined_features
+        x = extract_combined_features(image_path).reshape(1, -1)
     proba = bundle_predict_proba(bundle, x)[0]
     top = np.argsort(proba)[::-1][:top_k]
     return [{"class": bundle["class_names"][i], "confidence": float(proba[i])} for i in top]
@@ -355,7 +465,7 @@ def plot_gridsearch(cv_results: pd.DataFrame, save_path: Path):
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     import seaborn as sns
-    col = "color_w" if "color_w" in cv_results else "gamma"
+    col = next(c for c in ("color_w", "cnn_pca", "gamma") if c in cv_results)
     table = cv_results.assign(**{col: cv_results[col].astype(str)}).pivot_table(
         index="C", columns=col, values="mean_test_score", aggfunc="max")
     fig, ax = plt.subplots(figsize=(1.6 * len(table.columns) + 3, 0.8 * len(table) + 2.5))
@@ -407,14 +517,21 @@ def parse_gamma(values):
 def main():
     p = argparse.ArgumentParser(description="Train + đánh giá Classical SVM (TN 3)")
     svm_cfg = CONFIG.get("svm", {})
-    p.add_argument("--backend", choices=["sklearn", "tn1"], default="sklearn",
-                   help="sklearn (mặc định, đã tune): HOG-PCA + màu Hellinger -> SVC. "
+    p.add_argument("--backend", choices=["v2", "sklearn", "tn1"], default="v2",
+                   help="v2 (mặc định): HOG16-PCA + HSV + HSV theo vùng + LBP -> SVC (svm_features.py). "
+                        "sklearn: HOG8-PCA + màu RGB Hellinger -> SVC (cấu hình TN 3). "
                         "tn1: PCAWrapper + ClassicalSVMClassifier gốc của nhóm (để so sánh)")
     p.add_argument("--hog-pca", type=int, nargs="+", default=[50, 100],
                    help="Số chiều PCA cho phần HOG (backend sklearn)")
     p.add_argument("--color-w", type=float, nargs="+", default=[10, 20],
                    help="Trọng số phần màu sau biến đổi Hellinger (backend sklearn)")
-    p.add_argument("--c", type=float, nargs="+", default=[3, 10, 30])
+    p.add_argument("--c", type=float, nargs="+", default=None,
+                   help="Lưới C. Mặc định: CONFIG['svm']['v2_c_list'] cho v2, [3, 10, 30] cho backend khác")
+    p.add_argument("--no-flip", action="store_true", help="v2: không lật ngang ảnh train")
+    p.add_argument("--blocks", nargs="+", default=None,
+                   choices=["cnn", "hog8", "hog16", "rgb", "hsv", "hsv_grid", "lbp"],
+                   help="v2: các khối đặc trưng (mặc định CONFIG['svm']['v2_blocks']). "
+                        "'cnn' = đặc trưng MobileNetV2 đã huấn luyện sẵn (hướng B)")
     p.add_argument("--gamma", nargs="+", default=["scale"])
     p.add_argument("--n-components", type=int, default=svm_cfg.get("pca_n_components", 200))
     p.add_argument("--cv", type=int, default=svm_cfg.get("cv_folds", 5))
@@ -426,6 +543,12 @@ def main():
     p.add_argument("--tag", type=str, default="", help="Hậu tố tên output, vd 'quick' -> classical_svm_quick_*")
     args = p.parse_args()
     args.gamma = parse_gamma(args.gamma)
+    if args.c is None:
+        args.c = list(svm_cfg.get("v2_c_list", [1, 3, 10, 30])) if args.backend == "v2" else [3, 10, 30]
+    args.v2_blocks = list(args.blocks or svm_cfg.get("v2_blocks", ["hog16", "hsv", "hsv_grid", "lbp"]))
+    args.v2_hog_pca = int(svm_cfg.get("v2_hog_pca", 50))
+    args.v2_cnn_pca = list(svm_cfg.get("v2_cnn_pca", [128, 256]))
+    use_flip = args.backend == "v2" and svm_cfg.get("v2_flip_augment", True) and not args.no_flip
 
     name = MODEL_NAME + (f"_{args.tag}" if args.tag else "")
     paths_cfg = CONFIG["paths"]
@@ -446,9 +569,16 @@ def main():
     print(f"Classes: {len(class_names)} | train {len(tr_paths)} | val {len(va_paths)} | test {len(te_paths)}")
 
     # ---- Đặc trưng ----
-    X_tr, k_tr, s_tr = extract_features_cached(tr_paths, "train", cache_dir, args.n_jobs)
-    X_va, k_va, _ = extract_features_cached(va_paths, "validation", cache_dir, args.n_jobs)
-    X_te, k_te, s_te = extract_features_cached(te_paths, "test", cache_dir, args.n_jobs)
+    X_tr_flip = None
+    if args.backend == "v2":
+        X_tr, X_tr_flip, k_tr, s_tr = extract_v2_cached(tr_paths, "train", cache_dir, args.v2_blocks,
+                                                        use_flip, args.n_jobs)
+        X_va, _, k_va, _ = extract_v2_cached(va_paths, "validation", cache_dir, args.v2_blocks, False, args.n_jobs)
+        X_te, _, k_te, s_te = extract_v2_cached(te_paths, "test", cache_dir, args.v2_blocks, False, args.n_jobs)
+    else:
+        X_tr, k_tr, s_tr = extract_features_cached(tr_paths, "train", cache_dir, args.n_jobs)
+        X_va, k_va, _ = extract_features_cached(va_paths, "validation", cache_dir, args.n_jobs)
+        X_te, k_te, s_te = extract_features_cached(te_paths, "test", cache_dir, args.n_jobs)
     y_tr, y_va, y_te = y_tr[k_tr], y_va[k_va], y_te[k_te]
     te_paths = [p for p, k in zip(te_paths, k_te) if k]
     print(f"Số chiều đặc trưng: {X_tr.shape[1]}")
@@ -461,9 +591,15 @@ def main():
         return
 
     # ---- Train ----
-    trainer = train_sklearn if args.backend == "sklearn" else train_tn1
-    bundle, best_params, cv_score, cv_results, t_search, t_refit = trainer(X_tr, y_tr, args)
-    bundle.update({"class_names": class_names, "feature_params": _feature_params(),
+    if args.backend == "v2":
+        from src.features.svm_features import feature_params as v2_feature_params
+        bundle, best_params, cv_score, cv_results, t_search, t_refit = train_v2(X_tr, y_tr, args, X_tr_flip)
+        fparams = v2_feature_params(args.v2_blocks)
+    else:
+        trainer = train_sklearn if args.backend == "sklearn" else train_tn1
+        bundle, best_params, cv_score, cv_results, t_search, t_refit = trainer(X_tr, y_tr, args)
+        fparams = _feature_params()
+    bundle.update({"class_names": class_names, "feature_params": fparams,
                    "n_features": int(X_tr.shape[1]), "n_components": args.n_components})
     print(f"Best params: {best_params} | CV F1 macro: {cv_score:.4f} | search {t_search / 60:.1f} phút")
 
@@ -516,9 +652,13 @@ def main():
         json.dump(summary, f, indent=2, ensure_ascii=False)
 
     fp = bundle["feature_params"]
+    if args.backend == "v2":
+        from src.features.svm_features import describe_blocks
+        architecture = (f"{describe_blocks(args.v2_blocks, best_params)} -> L2 theo khối -> SVC RBF"
+                        f"{' (lật ngang ảnh train)' if use_flip else ''}")
     metadata = {
         "model_name": name,
-        "architecture": (
+        "architecture": architecture if args.backend == "v2" else (
             f"HOG({fp['hog_orientations']} hướng, cell {fp['hog_pixels_per_cell']}) -> PCA({best_params.get('hog_pca')}) "
             f"+ Color Hist RGB({fp['color_hist_bins']} bins, Hellinger x{best_params.get('color_w')}) -> SVC RBF"
             if args.backend == "sklearn" else
@@ -531,12 +671,17 @@ def main():
         "n_support_vectors": bundle["n_support_vectors"],
         "input_size": fp["img_size"][0],
         "n_features_before_pca": int(X_tr.shape[1]),
-        "pca_components": best_params.get("hog_pca", min(args.n_components, X_tr.shape[1])),
+        "pca_components": (best_params.get("cnn_pca") or best_params.get("hog_pca")
+                           or min(args.n_components, X_tr.shape[1])),
         "pca_explained_variance": bundle["explained_variance"],
         "optimizer": "GridSearchCV (scoring = f1_macro)",
         "loss_function": "hinge (SVM)",
         "param_grid": ({"C": args.c, "gamma": args.gamma, "hog_pca": args.hog_pca, "color_w": args.color_w}
-                       if args.backend == "sklearn" else {"C": args.c, "gamma": args.gamma}),
+                       if args.backend == "sklearn" else
+                       {"C": args.c, "gamma": ["scale"], "hog_pca": [args.v2_hog_pca]} if args.backend == "v2" else
+                       {"C": args.c, "gamma": args.gamma}),
+        "feature_blocks": args.v2_blocks if args.backend == "v2" else None,
+        "flip_augment": bool(use_flip),
         "cv_folds": args.cv,
         "best_params": best_params,
         "best_cv_f1_macro": cv_score,
@@ -565,7 +710,7 @@ def main():
     print("\n" + "=" * 60)
     print(f"[{name}] Test accuracy {metrics['accuracy']:.2%} | F1 macro {metrics['f1_macro']:.4f}")
     print(f"Train acc {train_acc:.2%} | Val acc {val_acc:.2%} -> {overfit['status']}")
-    print(f"Best: {best_params} | PCA (HOG) giữ {bundle['explained_variance']:.1%} phương sai")
+    print(f"Best: {best_params} | PCA ({bundle.get('pca_block', 'HOG')}) giữ {bundle['explained_variance']:.1%} phương sai")
     print(f"Đã lưu: reports/{name}_*.json, checkpoints/{name}.pkl")
     print("Tiếp theo: python -m src.evaluation.compare_all")
 

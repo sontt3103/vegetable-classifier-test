@@ -6,7 +6,8 @@ trả về PredictionResult) nên Streamlit dùng được cả 3 model.
 Hỗ trợ 2 định dạng file model:
   1. BUNDLE do `python -m src.training.train_svm` lưu: checkpoints/classical_svm.pkl
      (dict gồm backend, pipeline hoặc pca+svm, class_names, feature_params...).
-     Đây là định dạng mặc định hiện tại của nhóm.
+     Đây là định dạng mặc định hiện tại của nhóm. backend "v2" dùng bộ đặc trưng
+     src/features/svm_features.py (HOG16 + HSV + HSV theo vùng + LBP).
   2. CẶP FILE do classical_svm.py / train_svm --backend tn1 lưu:
      checkpoints/svm_model.pkl + checkpoints/pca_model.pkl.
 
@@ -50,8 +51,9 @@ def find_svm_checkpoint(ckpt_dir) -> Path | None:
     return None
 
 
-def _to_rgb_uint8(image_source, img_size: tuple) -> np.ndarray:
-    """path / file-like / PIL.Image -> ndarray RGB uint8 shape (H, W, 3)."""
+def _to_rgb_uint8(image_source, img_size: tuple | None) -> np.ndarray:
+    """path / file-like / PIL.Image -> ndarray RGB uint8 shape (H, W, 3).
+    img_size=None: giữ nguyên kích thước (bộ đặc trưng tự resize theo từng khối)."""
     try:
         img = image_source if isinstance(image_source, Image.Image) else Image.open(image_source)
         img = img.convert("RGB")
@@ -61,6 +63,8 @@ def _to_rgb_uint8(image_source, img_size: tuple) -> np.ndarray:
         raise InvalidImageError(f"Không thể đọc ảnh: {e}") from e
 
     array = np.asarray(img, dtype=np.uint8)
+    if img_size is None:
+        return np.ascontiguousarray(array)
     # Giống load_and_resize của hog_features.py: size (width, height), INTER_AREA
     return cv2.resize(array, tuple(img_size), interpolation=cv2.INTER_AREA)
 
@@ -92,8 +96,11 @@ def _load_pca(path: Path):
     return joblib.load(path)
 
 
-def _current_feature_params() -> dict:
-    """Tham số đặc trưng hiện tại của hog_features.py (cùng cách train_svm.py ghi lại)."""
+def _current_feature_params(saved: dict | None = None) -> dict:
+    """Tham số đặc trưng hiện tại của code (cùng cách train_svm.py ghi lại)."""
+    if saved and saved.get("feature_set") == "v2":
+        from src.features.svm_features import feature_params
+        return json.loads(json.dumps(feature_params(saved.get("blocks"))))
     from src.features import hog_features as hf
 
     params = {
@@ -108,7 +115,7 @@ def _current_feature_params() -> dict:
 
 
 def _check_feature_params(saved: dict) -> None:
-    current = _current_feature_params()
+    current = _current_feature_params(saved)
     saved = json.loads(json.dumps(saved))
     diffs = {k: (saved[k], current[k]) for k in saved if k in current and saved[k] != current[k]}
     if diffs:
@@ -153,7 +160,15 @@ class SVMVegetableClassifier:
             fp = obj.get("feature_params") or {}
             default_size = config.get("svm", {}).get("img_size", (128, 128))
             self.img_size = tuple(fp.get("img_size", default_size))
-            if obj["backend"] == "sklearn":
+            if obj["backend"] == "v2":
+                from src.features.svm_features import extract_vector_from_image
+
+                blocks = obj["blocks"]
+                # Nhận ảnh gốc; mỗi khối tự resize đúng như lúc train (128 thủ công, 224 cnn)
+                self._extract = lambda image: extract_vector_from_image(image, blocks)
+                self._full_size_input = True
+                self._estimator = obj["pipeline"]
+            elif obj["backend"] == "sklearn":
                 self._estimator = obj["pipeline"]
             else:
                 self._estimator = obj["svm"].model
@@ -204,7 +219,8 @@ class SVMVegetableClassifier:
         return None
 
     def _features(self, image_source) -> np.ndarray:
-        image = _to_rgb_uint8(image_source, self.img_size)
+        size = None if getattr(self, "_full_size_input", False) else self.img_size
+        image = _to_rgb_uint8(image_source, size)
         return self._extract(image).reshape(1, -1)
 
     def _predict_proba(self, X: np.ndarray) -> np.ndarray:
@@ -249,6 +265,12 @@ class SVMVegetableClassifier:
         except (AttributeError, IndexError):
             return est
 
+    def _feature_desc(self) -> str:
+        if self.bundle is not None and self.bundle["backend"] == "v2":
+            from src.features.svm_features import describe_blocks
+            return describe_blocks(self.bundle["blocks"])
+        return "HOG + Color Histogram"
+
     def _read_metadata(self) -> dict:
         meta = Path(self.config["paths"]["reports_dir"]) / "classical_svm_metadata.json"
         if meta.exists():
@@ -268,7 +290,12 @@ class SVMVegetableClassifier:
         pca_components, best_params = None, None
         if self.bundle is not None:
             n_support = self.bundle.get("n_support_vectors") or n_support
-            if self.bundle["backend"] == "sklearn":
+            if self.bundle["backend"] == "v2":
+                pca_block = next(b for b in self.bundle["blocks"] if b.startswith("hog") or b == "cnn")
+                pca_components = self.bundle["pipeline"].named_steps["features"] \
+                    .named_transformers_[pca_block].named_steps["pca"].n_components_
+                best_params = self.bundle.get("best_params") or meta.get("best_params")
+            elif self.bundle["backend"] == "sklearn":
                 try:
                     pca_components = self.bundle["pipeline"].named_steps["features"] \
                         .named_transformers_["hog"].n_components_
@@ -293,5 +320,6 @@ class SVMVegetableClassifier:
             "pca_components": pca_components,
             "best_params": best_params,
             "kernel": getattr(svc, "kernel", None),
+            "feature_desc": self._feature_desc(),
             "architecture": meta.get("architecture"),
         }
