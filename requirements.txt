@@ -13,20 +13,20 @@ Pillow>=10.0
 joblib>=1.3
 
 # Deep learning (CPU)
-tensorflow>=2.16
+# tensorflow>=2.16
 
 # Demo application
-streamlit>=1.32
+# streamlit>=1.32
 
 # Utilities
 tqdm>=4.66
 pyyaml>=6.0
 
 # Dataset download (tùy chọn — chỉ cần nếu dùng scripts/download_dataset.py)
-kaggle>=1.6
+# kaggle>=1.6
 
 # Notebook EDA
-jupyter
+# jupyter
 
 # Testing
 pytest>=7.4
