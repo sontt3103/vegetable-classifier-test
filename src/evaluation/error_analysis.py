@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use("Agg")
 import tensorflow as tf
 
 
@@ -109,3 +111,37 @@ def plot_correct_predictions_grid(test_ds: tf.data.Dataset, model: tf.keras.Mode
     if save_path:
         fig.savefig(save_path, dpi=150)
     return fig
+
+def main():
+    import argparse
+    from pathlib import Path
+    from configs.config import CONFIG, ensure_dirs
+    from src.data.dataset import discover_dataset, build_tf_dataset
+
+    parser = argparse.ArgumentParser(description="Phân tích ảnh dự đoán sai/đúng trên tập test.")
+    parser.add_argument("--model", required=True, choices=["baseline_cnn", "mobilenetv2_transfer"])
+    parser.add_argument("--n", type=int, default=12, help="số ảnh mỗi lưới")
+    args = parser.parse_args()
+
+    ensure_dirs()
+    ckpt = Path(CONFIG["paths"]["checkpoints_dir"]) / f"{args.model}.keras"
+    if not ckpt.exists():
+        raise FileNotFoundError(f"Không thấy {ckpt}. Hãy train model trước: python -m src.training.train")
+
+    splits, info = discover_dataset(CONFIG)
+    class_to_idx = {c: i for i, c in enumerate(info.class_names)}
+    test_ds = build_tf_dataset(splits["test"], class_to_idx, CONFIG, training=False)
+    model = tf.keras.models.load_model(ckpt)
+
+    fig_dir = Path(CONFIG["paths"]["figures_dir"])
+    wrong = collect_misclassified(test_ds, model, info.class_names)
+    print(f"Số ảnh dự đoán sai: {len(wrong)}")
+
+    plot_misclassified_grid(wrong, n=args.n, save_path=str(fig_dir / f"{args.model}_misclassified.png"))
+    plot_correct_predictions_grid(test_ds, model, info.class_names, n=args.n,
+                                  save_path=str(fig_dir / f"{args.model}_correct.png"))
+    print(f"Đã lưu ảnh vào {fig_dir}")
+
+
+if __name__ == "__main__":
+    main()
